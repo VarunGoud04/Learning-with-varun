@@ -1,20 +1,116 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://scient-e-library.vercel.app/</loc></url>
-  <url><loc>https://scient-e-library.vercel.app/about.html</loc></url>
-  <url><loc>https://scient-e-library.vercel.app/contact.html</loc></url>
-  <url><loc>https://scient-e-library.vercel.app/register.html</loc></url>
-  <url><loc>https://scient-e-library.vercel.app/login.html</loc></url>
-  <url><loc>https://scient-e-library.vercel.app/ai.html</loc></url>
-  <url><loc>https://scient-e-library.vercel.app/ml.html</loc></url>
-  <url><loc>https://scient-e-library.vercel.app/fsd.html</loc></url>
-  <url><loc>https://scient-e-library.vercel.app/iot.html</loc></url>
-  <url><loc>https://scient-e-library.vercel.app/flat.html</loc></url>
-  <url><loc>https://scient-e-library.vercel.app/t.html</loc></url>
-  <url><loc>https://scient-e-library.vercel.app/privacy.html</loc></url>
-  <url><loc>https://scient-e-library.vercel.app/terms.html</loc></url>
-  <url><loc>https://scient-e-library.vercel.app/team.html</loc></url>
-  <url><loc>https://scient-e-library.vercel.app/vision-mission.html</loc></url>
-<url><loc>https://scient-e-library.vercel.app/index.html</loc></url>
-  <!-- Add any other pages you have in public/ -->
+<url>
+<loc>https://scient-e-library.vercel.app/ap.html</loc>
+<lastmod>2025-07-03T09:27:32+00:00</lastmod>
+<priority>0.41</priority>
+</url>
+<url>
+<loc>https://scient-e-library.vercel.app/eng.html</loc>
+<lastmod>2025-07-03T09:27:32+00:00</lastmod>
+<priority>0.41</priority>
+</url>
+<url>
+<loc>https://scient-e-library.vercel.app/edc.html</loc>
+<lastmod>2025-07-03T09:27:32+00:00</lastmod>
+<priority>0.41</priority>
+</url>
+<url>
+<loc>https://scient-e-library.vercel.app/cosm.html</loc>
+<lastmod>2025-07-03T09:27:33+00:00</lastmod>
+<priority>0.41</priority>
+</url>
+<url>
+<loc>https://scient-e-library.vercel.app/coa.html</loc>
+<lastmod>2025-07-03T09:27:33+00:00</lastmod>
+<priority>0.41</priority>
+</url>
+<url>
+<loc>https://scient-e-library.vercel.app/java.html</loc>
+<lastmod>2025-07-03T09:27:33+00:00</lastmod>
+<priority>0.41</priority>
+</url>
+<url>
+<loc>https://scient-e-library.vercel.app/ds.html</loc>
+<lastmod>2025-07-03T09:27:33+00:00</lastmod>
+<priority>0.41</priority>
+</url>
+<url>
+<loc>https://scient-e-library.vercel.app/de.html</loc>
+<lastmod>2025-07-03T09:27:33+00:00</lastmod>
+<priority>0.41</priority>
+</url>
+<url>
+<loc>https://scient-e-library.vercel.app/dm.html</loc>
+<lastmod>2025-07-03T09:27:33+00:00</lastmod>
+<priority>0.41</priority>
+</url>
+<url>
+<loc>https://scient-e-library.vercel.app/befa.html</loc>
+<lastmod>2025-07-03T09:27:33+00:00</lastmod>
+<priority>0.41</priority>
+</url>
+<url>
+<loc>https://scient-e-library.vercel.app/os.html</loc>
+<lastmod>2025-07-03T09:27:34+00:00</lastmod>
+<priority>0.41</priority>
+</url>
+<url>
+<loc>https://scient-e-library.vercel.app/dbms.html</loc>
+<lastmod>2025-07-03T09:27:34+00:00</lastmod>
+<priority>0.41</priority>
+</url>
+<url>
+<loc>https://scient-e-library.vercel.app/se.html</loc>
+<lastmod>2025-07-03T09:27:34+00:00</lastmod>
+<priority>0.41</priority>
+</url>
+<url>
+<loc>https://scient-e-library.vercel.app/design.html</loc>
+<lastmod>2025-07-03T09:27:34+00:00</lastmod>
+<priority>0.41</priority>
+</url>
+<url>
+<loc>https://scient-e-library.vercel.app/cn.html</loc>
+<lastmod>2025-07-03T09:27:34+00:00</lastmod>
+<priority>0.41</priority>
+</url>
+<url>
+<loc>https://scient-e-library.vercel.app/Devops.html</loc>
+<lastmod>2025-07-03T09:27:34+00:00</lastmod>
+<priority>0.41</priority>
+</url>
+<url>
+<loc>https://scient-e-library.vercel.app/pf1.html</loc>
+<lastmod>2025-07-03T09:27:35+00:00</lastmod>
+<priority>0.41</priority>
+</url>
+<url>
+<loc>https://scient-e-library.vercel.app/pf2.html</loc>
+<lastmod>2025-07-03T09:27:35+00:00</lastmod>
+<priority>0.41</priority>
+</url>
+<url>
+<loc>https://scient-e-library.vercel.app/Da.html</loc>
+<lastmod>2025-07-03T09:27:35+00:00</lastmod>
+<priority>0.33</priority>
+</url>
+<url>
+<loc>https://scient-e-library.vercel.app/ai.html</loc>
+<lastmod>2025-07-03T09:27:35+00:00</lastmod>
+<priority>0.33</priority>
+</url>
+<url>
+<loc>https://scient-e-library.vercel.app/iot.html</loc>
+<lastmod>2025-07-03T09:27:35+00:00</lastmod>
+<priority>0.33</priority>
+</url>
+<url>
+<loc>https://scient-e-library.vercel.app/ml.html</loc>
+<lastmod>2025-07-03T09:27:35+00:00</lastmod>
+<priority>0.33</priority>
+</url>
+<url>
+<loc>https://scient-e-library.vercel.app/nlp.html</loc>
+<lastmod>2025-07-03T09:27:36+00:00</lastmod>
+<priority>0.33</priority>
+</url>
 </urlset>
