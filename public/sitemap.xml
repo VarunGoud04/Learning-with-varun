@@ -6,19 +6,28 @@
     <priority>1.00</priority>
   </url>
   <url>
-    <loc>https://scient-e-library.vercel.app/befa.html</loc>
+    <loc>https://scient-e-library.vercel.app/about.html</loc>
     <lastmod>2025-07-04T10:00:00+00:00</lastmod>
-    <priority>0.41</priority>
+    <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://scient-e-library.vercel.app/dbms.html</loc>
+    <loc>https://scient-e-library.vercel.app/courses.html</loc>
     <lastmod>2025-07-04T10:00:00+00:00</lastmod>
-    <priority>0.41</priority>
+    <priority>0.64</priority>
   </url>
   <url>
-    <loc>https://scient-e-library.vercel.app/nlp.html</loc>
+    <loc>https://scient-e-library.vercel.app/register.html</loc>
     <lastmod>2025-07-04T10:00:00+00:00</lastmod>
-    <priority>0.33</priority>
+    <priority>0.80</priority>
   </url>
-  <!-- Add more URLs as needed -->
+  <url>
+    <loc>https://scient-e-library.vercel.app/login.html</loc>
+    <lastmod>2025-07-04T10:00:00+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://scient-e-library.vercel.app/contact.html</loc>
+    <lastmod>2025-07-04T10:00:00+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
 </urlset>
