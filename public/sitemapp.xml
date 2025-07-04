@@ -10,4 +10,44 @@
     <lastmod>2025-07-04T10:00:00+00:00</lastmod>
     <priority>0.80</priority>
   </url>
+  <url>
+    <loc>https://scient-e-library.vercel.app/register.html</loc>
+    <lastmod>2025-07-04T10:00:00+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://scient-e-library.vercel.app/login.html</loc>
+    <lastmod>2025-07-04T10:00:00+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://scient-e-library.vercel.app/contact.html</loc>
+    <lastmod>2025-07-04T10:00:00+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://scient-e-library.vercel.app/courses.html</loc>
+    <lastmod>2025-07-04T10:00:00+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://scient-e-library.vercel.app/team.html</loc>
+    <lastmod>2025-07-04T10:00:00+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://scient-e-library.vercel.app/faq.html</loc>
+    <lastmod>2025-07-04T10:00:00+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://scient-e-library.vercel.app/privacy.html</loc>
+    <lastmod>2025-07-04T10:00:00+00:00</lastmod>
+    <priority>0.60</priority>
+  </url>
+  <url>
+    <loc>https://scient-e-library.vercel.app/terms.html</loc>
+    <lastmod>2025-07-04T10:00:00+00:00</lastmod>
+    <priority>0.60</priority>
+  </url>
 </urlset>
