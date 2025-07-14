@@ -23,11 +23,15 @@
         {
           "key": "X-Powered-By",
           "value": "Scient Institute of Technology, Ibrahimpatnam"
+        },
+        {
+          "key": "X-Sitemap",
+          "value": "https://scient-e-library.vercel.app/sitemap.xml"
         }
       ]
     },
     {
-      "source": "/(.*)", 
+      "source": "/(.*)",
       "headers": [
         {
           "key": "Cache-Control",
