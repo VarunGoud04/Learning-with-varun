@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Under Maintenance | Scient E-Library</title>
+  <meta name="description" content="Scient E-Library is temporarily under maintenance to serve you better.">
+  <style>
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0); }
+    }
+
+    @keyframes bgShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #f6d365, #fda085, #a1c4fd, #c2e9fb);
+      background-size: 400% 400%;
+      animation: bgShift 16s ease infinite;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #333;
+      padding: 20px;
+    }
+
+    .container {
+      background: rgba(255, 255, 255, 0.95);
+      padding: 40px 20px;
+      border-radius: 20px;
+      box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
+      max-width: 680px;
+      width: 100%;
+      animation: float 3.5s ease-in-out infinite;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      color: #6c63ff;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 1.1em;
+      color: #555;
+      line-height: 1.7;
+    }
+
+    .sparkle {
+      font-size: 2.2em;
+      margin-bottom: 20px;
+      animation: float 2.5s ease-in-out infinite;
+    }
+
+    .footer {
+      margin-top: 30px;
+      font-size: 0.9em;
+      color: #666;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2em;
+      }
+
+      p {
+        font-size: 1em;
+      }
+
+      .sparkle {
+        font-size: 1.8em;
+      }
+    }
+        .notify-button {
+      margin-top: 30px;
+      padding: 12px 28px;
+      font-size: 1em;
+      background-color: #6c63ff;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+  </style>
+</head>
+<body>
+    <div class="container">
+    <div class="sparkle">📚✨🛠️</div>
+    <h1>We're Getting Things Ready for You</h1>
+    <p>
+      Thank you for stopping by Scient E-Library! 💡<br><br>
+      Our website just went live and we’re adding all the helpful resources — from notes to study guides and more.
+      We’re working hard to make your experience smooth, fast, and rich with content.<br><br>
+      Please bear with us a little longer — exciting updates are on the way!
+    </p>
+    <button class="notify-button" onclick="alert('Thank you! We’ll notify you as soon as we’re ready!')">
+      Notify Me When Live
+    </button>
+    <div class="footer">
+      Much love, patience, and power to you 💙 <br>  — B. Varun Goud &Team
+    </div>
+  </div>
+</body>
+</html>
