@@ -17,18 +17,15 @@
       color: #ffeb3b;
       transition: color 0.3s ease;
     }
-
     footer {
       background-color: #1a202c;
       color: white;
       padding: 2rem;
       text-align: center;
     }
-
     footer a {
       color: #ffeb3b;
     }
-
     .cta-button {
       background-color: #002f6c;
       color: white;
@@ -38,25 +35,50 @@
       transition: background-color 0.3s, transform 0.3s;
       display: inline-block;
     }
-
     .cta-button:hover {
       background-color: #003366;
       transform: scale(1.05);
     }
-
     .card {
       transition: transform 0.3s, box-shadow 0.3s;
     }
-
     .card:hover {
       transform: translateY(-10px);
       box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
     }
-
     .disabled-btn {
       opacity: 0.6;
       cursor: not-allowed;
-      pointer-events: none;
+    }
+    /* Modal Styles */
+    .modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.6);
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+    .modal-content {
+      background: #fff;
+      padding: 2rem;
+      border-radius: 10px;
+      text-align: center;
+      max-width: 400px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+    }
+    .modal-close {
+      background-color: #002f6c;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .modal-close:hover {
+      background-color: #003366;
     }
   </style>
 </head>
@@ -94,27 +116,27 @@
       <div class="card p-6 bg-white rounded-lg shadow-md">
         <h3 class="text-xl font-semibold text-blue-900">Unit 1</h3>
         <p class="mt-4">Introduction to ML, Applications, Types</p>
-        <a href="#" class="cta-button mt-4 disabled-btn">Download</a>
+        <a href="#" class="cta-button mt-4 disabled-btn course-link">Download</a>
       </div>
       <div class="card p-6 bg-white rounded-lg shadow-md">
         <h3 class="text-xl font-semibold text-blue-900">Unit 2</h3>
         <p class="mt-4">Regression Algorithms, Performance</p>
-        <a href="#" class="cta-button mt-4 disabled-btn">Download</a>
+        <a href="#" class="cta-button mt-4 disabled-btn course-link">Download</a>
       </div>
       <div class="card p-6 bg-white rounded-lg shadow-md">
         <h3 class="text-xl font-semibold text-blue-900">Unit 3</h3>
         <p class="mt-4">Classification Techniques, Decision Trees</p>
-        <a href="#" class="cta-button mt-4 disabled-btn">Download</a>
+        <a href="#" class="cta-button mt-4 disabled-btn course-link">Download</a>
       </div>
       <div class="card p-6 bg-white rounded-lg shadow-md">
         <h3 class="text-xl font-semibold text-blue-900">Unit 4</h3>
         <p class="mt-4">Unsupervised Learning, Clustering</p>
-        <a href="#" class="cta-button mt-4 disabled-btn">Download</a>
+        <a href="#" class="cta-button mt-4 disabled-btn course-link">Download</a>
       </div>
       <div class="card p-6 bg-white rounded-lg shadow-md">
         <h3 class="text-xl font-semibold text-blue-900">Unit 5</h3>
         <p class="mt-4">Ensemble Models & Model Selection</p>
-        <a href="#" class="cta-button mt-4 disabled-btn">Download</a>
+        <a href="#" class="cta-button mt-4 disabled-btn course-link">Download</a>
       </div>
     </div>
   </section>
@@ -126,17 +148,17 @@
       <div class="card p-6 bg-white rounded-lg shadow-md">
         <h3 class="text-xl font-semibold text-blue-900">2022 Regular</h3>
         <p class="mt-4">ML Introduction, Regression</p>
-        <a href="#" class="cta-button mt-4 disabled-btn">Download</a>
+        <a href="#" class="cta-button mt-4 disabled-btn course-link">Download</a>
       </div>
       <div class="card p-6 bg-white rounded-lg shadow-md">
         <h3 class="text-xl font-semibold text-blue-900">2023 Supply</h3>
         <p class="mt-4">Clustering and KNN Algorithms</p>
-        <a href="#" class="cta-button mt-4 disabled-btn">Download</a>
+        <a href="#" class="cta-button mt-4 disabled-btn course-link">Download</a>
       </div>
       <div class="card p-6 bg-white rounded-lg shadow-md">
         <h3 class="text-xl font-semibold text-blue-900">JNTUH Portal</h3>
         <p class="mt-4">Official Download Link</p>
-        <a href="#" class="cta-button mt-4 disabled-btn">View</a>
+        <a href="#" class="cta-button mt-4 disabled-btn course-link">View</a>
       </div>
     </div>
   </section>
@@ -148,27 +170,27 @@
       <div class="card p-6 bg-white rounded-lg shadow-md">
         <h3 class="text-xl font-semibold text-blue-900">Unit 1 Notes</h3>
         <p class="mt-4">Overview of ML & Learning Types</p>
-        <a href="#" class="cta-button mt-4 disabled-btn">Download</a>
+        <a href="#" class="cta-button mt-4 disabled-btn course-link">Download</a>
       </div>
       <div class="card p-6 bg-white rounded-lg shadow-md">
         <h3 class="text-xl font-semibold text-blue-900">Unit 2 Notes</h3>
         <p class="mt-4">Linear & Logistic Regression</p>
-        <a href="#" class="cta-button mt-4 disabled-btn">Download</a>
+        <a href="#" class="cta-button mt-4 disabled-btn course-link">Download</a>
       </div>
       <div class="card p-6 bg-white rounded-lg shadow-md">
         <h3 class="text-xl font-semibold text-blue-900">Unit 3 Notes</h3>
         <p class="mt-4">Classification, Naive Bayes</p>
-        <a href="#" class="cta-button mt-4 disabled-btn">Download</a>
+        <a href="#" class="cta-button mt-4 disabled-btn course-link">Download</a>
       </div>
       <div class="card p-6 bg-white rounded-lg shadow-md">
         <h3 class="text-xl font-semibold text-blue-900">Unit 4 Notes</h3>
         <p class="mt-4">K-Means, DBSCAN</p>
-        <a href="#" class="cta-button mt-4 disabled-btn">Download</a>
+        <a href="#" class="cta-button mt-4 disabled-btn course-link">Download</a>
       </div>
       <div class="card p-6 bg-white rounded-lg shadow-md">
         <h3 class="text-xl font-semibold text-blue-900">Unit 5 Notes</h3>
         <p class="mt-4">Ensemble Models: Bagging, Boosting</p>
-        <a href="#" class="cta-button mt-4 disabled-btn">Download</a>
+        <a href="#" class="cta-button mt-4 disabled-btn course-link">Download</a>
       </div>
     </div>
   </section>
@@ -182,19 +204,44 @@
     </div>
   </footer>
 
+  <!-- Modal -->
+  <div id="server-error-modal" class="modal">
+    <div class="modal-content">
+      <h2 class="text-2xl font-semibold text-red-600">Content/Notes Not Yet Updated</h2>
+      <p class="mt-4 text-lg">We are currently updating resources. Please try again later.</p>
+      <button class="modal-close mt-6" onclick="closeModal()">Close</button>
+    </div>
+  </div>
+
   <!-- JavaScript -->
   <script>
     const toggleBtn = document.getElementById('menu-toggle');
     const menu = document.getElementById('menu');
+    const modal = document.getElementById('server-error-modal');
+    const courseLinks = document.querySelectorAll('.course-link');
+
     toggleBtn.addEventListener('click', () => {
       menu.classList.toggle('hidden');
     });
 
+    // Open modal on disabled button click
+    courseLinks.forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        modal.style.display = 'flex';
+      });
+    });
+
+    // Close modal
+    function closeModal() {
+      modal.style.display = 'none';
+    }
+
+    // Disable right-click & inspect
     document.oncontextmenu = () => {
       alert("Right-click is disabled for security purposes.");
       return false;
     };
-
     document.onkeydown = (e) => {
       if (e.keyCode === 123 || (e.ctrlKey && e.shiftKey && e.keyCode === 73)) {
         alert("Inspect Element is disabled.");
