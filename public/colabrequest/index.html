@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Collaborator Registration | Scient E-Library</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" type="image/png" href="/public/logo11.jpg" />
+  <link rel="apple-touch-icon" href="/public/logo11.jpg">
+
+  <!-- Updated Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-aKq7rtrzFzJ3J8h1D2oQQ0OvqvXt2E1XrU+cCQgD3H8/E5U6Tb8PmAGcFQ4pKU/6h+JfVGpCk3OmE37r4QyTpw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body class="bg-gray-50 text-gray-900">
+
+  <!-- Navbar -->
+  <nav class="bg-blue-800 text-white py-4 shadow-md">
+    <div class="max-w-7xl mx-auto px-4 flex items-center justify-between">
+      <a href="../index.html" class="text-2xl font-bold">Scient E-Library</a>
+      <div class="space-x-4">
+        <a href="../index.html" class="hover:text-yellow-400">Home</a>
+        <a href="../about.html" class="hover:text-yellow-400">About</a>
+        <a href="../colabrequest/" class="hover:text-yellow-400 font-semibold">Collaborate</a>
+        <a href="../contact.html" class="hover:text-yellow-400">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Form Section -->
+  <section class="max-w-2xl mx-auto my-16 px-4">
+    <h1 class="text-4xl font-bold text-blue-900 text-center mb-4">Become a Collaborator</h1>
+    <p class="text-center text-gray-700 mb-8">
+      Students interested in contributing notes or resources can register below. All submissions are reviewed before being added to the site.
+    </p>
+
+    <form id="collabForm" class="bg-white p-8 rounded-lg shadow-lg space-y-6 relative">
+
+      <!-- Spinner -->
+      <div id="spinner" class="hidden justify-center items-center mb-4">
+        <div class="w-10 h-10 border-4 border-blue-800 border-t-transparent rounded-full animate-spin mx-auto"></div>
+      </div>
+
+      <div>
+        <label for="name" class="block text-gray-700 mb-1">Full Name</label>
+        <input type="text" id="name" name="name" required class="w-full border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-blue-600">
+      </div>
+
+      <div>
+        <label for="email" class="block text-gray-700 mb-1">Email</label>
+        <input type="email" id="email" name="email" required class="w-full border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-blue-600">
+      </div>
+
+      <div>
+        <label for="contact" class="block text-gray-700 mb-1">Contact Number</label>
+        <input type="tel" id="contact" name="contact" placeholder="e.g., +91 9876543210" required class="w-full border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-blue-600">
+      </div>
+
+      <div>
+        <label for="college" class="block text-gray-700 mb-1">College / Institution</label>
+        <input type="text" id="college" name="college" required class="w-full border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-blue-600">
+      </div>
+
+      <div>
+        <label for="subjects" class="block text-gray-700 mb-1">Subjects / Topics Interested</label>
+        <input type="text" id="subjects" name="subjects" placeholder="e.g., OS, DBMS, AI" required class="w-full border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-blue-600">
+      </div>
+
+      <div>
+        <label for="message" class="block text-gray-700 mb-1">Additional Info</label>
+        <textarea id="message" name="message" rows="4" placeholder="Optional" class="w-full border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-blue-600"></textarea>
+      </div>
+
+      <button type="submit" class="w-full bg-blue-800 text-white font-semibold py-3 rounded-md hover:bg-blue-900 transition-colors">
+        Register
+      </button>
+
+      <p class="text-center text-gray-500 text-sm mt-4">We will review your submission and contact you if approved.</p>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-8 mt-16">
+    <div class="max-w-7xl mx-auto text-center text-sm text-gray-400">
+      © 2025 Scient E-Library. All rights reserved. <br>
+      Developed by <a href="https://www.linkedin.com/in/bandi-varun-goud" class="text-blue-500 hover:underline" target="_blank">B. Varun Goud</a>
+    </div>
+  </footer>
+
+  <!-- Success Popup -->
+  <div id="successPopup" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50 opacity-0 pointer-events-none transition-opacity duration-500">
+    <div class="bg-white rounded-lg p-8 shadow-lg text-center max-w-sm transform scale-0 transition-transform duration-500">
+      <i class="fas fa-check-circle text-green-500 text-4xl mb-4" id="popupIcon"></i>
+      <h2 class="text-xl font-bold mb-2" id="popupTitle">Thank you!</h2>
+      <p class="text-gray-700" id="popupMessage">Your collaboration request has been submitted successfully.<br>We will contact you soon.</p>
+      <button id="popupClose" class="mt-4 px-4 py-2 bg-blue-800 text-white rounded-md hover:bg-blue-900">Close</button>
+    </div>
+  </div>
+
+  <!-- Confetti Library -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+  <script>
+    const form = document.getElementById('collabForm');
+    const spinner = document.getElementById('spinner');
+    const popupOverlay = document.getElementById('successPopup');
+    const popupCard = popupOverlay.querySelector('div');
+    const popupIcon = document.getElementById('popupIcon');
+    const popupTitle = document.getElementById('popupTitle');
+    const popupMessage = document.getElementById('popupMessage');
+    const popupClose = document.getElementById('popupClose');
+
+    function showPopup() {
+      popupOverlay.classList.remove('pointer-events-none', 'opacity-0');
+      popupOverlay.classList.add('opacity-100');
+      popupCard.classList.remove('scale-0');
+      popupCard.classList.add('scale-100');
+    }
+
+    function hidePopup() {
+      popupOverlay.classList.add('pointer-events-none', 'opacity-0');
+      popupOverlay.classList.remove('opacity-100');
+      popupCard.classList.remove('scale-100');
+      popupCard.classList.add('scale-0');
+    }
+
+    popupClose.addEventListener('click', hidePopup);
+
+    function launchConfetti() {
+      confetti({
+        particleCount: 150,
+        spread: 70,
+        origin: { y: 0.6 },
+        colors: ['#2563eb', '#facc15', '#22c55e', '#f97316', '#f43f5e']
+      });
+    }
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      spinner.classList.remove('hidden');
+      form.querySelector('button[type="submit"]').disabled = true;
+
+      const data = {
+        name: form.name.value,
+        email: form.email.value,
+        contact: form.contact.value,
+        college: form.college.value,
+        subjects: form.subjects.value,
+        message: form.message.value
+      };
+
+      fetch("https://script.google.com/macros/s/AKfycbxJvIAfL3u0sFpXp16nc60IbXXPLUho4MJwtJUvnSoZO6I5HPGpt38QKLQSAER5cmWL/exec", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(data)
+      })
+      .then(res => res.text())
+      .then(response => {
+        spinner.classList.add('hidden');
+        form.querySelector('button[type="submit"]').disabled = false;
+
+        popupIcon.className = "fas fa-check-circle text-green-500 text-4xl mb-4";
+        popupTitle.textContent = "Thank you!";
+        popupMessage.textContent = "Your collaboration request has been submitted successfully. We will contact you soon.";
+        showPopup();
+        launchConfetti();
+        form.reset();
+
+        // Redirect after 5s
+        setTimeout(() => {
+          window.location.href = '../index.html';
+        }, 5000);
+      })
+      .catch(error => {
+        spinner.classList.add('hidden');
+        form.querySelector('button[type="submit"]').disabled = false;
+
+        popupIcon.className = "fas fa-exclamation-circle text-red-500 text-4xl mb-4";
+        popupTitle.textContent = "Oops!";
+        popupMessage.textContent = "Something went wrong. Please try again later.";
+        showPopup();
+        console.error(error);
+      });
+    });
+  </script>
+</body>
+</html>
