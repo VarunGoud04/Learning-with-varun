@@ -13,19 +13,35 @@
 </head>
 <body class="bg-gray-50 text-gray-900">
 
-  <!-- Navbar -->
-  <nav class="bg-blue-800 text-white py-4 shadow-md">
-    <div class="max-w-7xl mx-auto px-4 flex items-center justify-between">
+<!-- Navbar -->
+  <nav class="bg-blue-800 text-white shadow-md fixed w-full top-0 left-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 flex items-center justify-between h-16">
       <a href="../index.html" class="text-2xl font-bold">Scient E-Library</a>
-      <div class="space-x-4">
+
+      <!-- Hamburger for mobile -->
+      <div class="md:hidden">
+        <button id="menuBtn" class="focus:outline-none">
+          <i class="fas fa-bars text-2xl"></i>
+        </button>
+      </div>
+
+      <!-- Desktop Menu -->
+      <div id="navLinks" class="hidden md:flex space-x-4">
         <a href="../index.html" class="hover:text-yellow-400">Home</a>
         <a href="../about.html" class="hover:text-yellow-400">About</a>
         <a href="../colabrequest/" class="hover:text-yellow-400 font-semibold">Collaborate</a>
         <a href="../contact.html" class="hover:text-yellow-400">Contact</a>
       </div>
     </div>
-  </nav>
 
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="hidden md:hidden bg-blue-700">
+      <a href="../index.html" class="block px-4 py-2 hover:bg-blue-600">Home</a>
+      <a href="../about.html" class="block px-4 py-2 hover:bg-blue-600">About</a>
+      <a href="../colabrequest/" class="block px-4 py-2 hover:bg-blue-600 font-semibold">Collaborate</a>
+      <a href="../contact.html" class="block px-4 py-2 hover:bg-blue-600">Contact</a>
+    </div>
+  </nav>
   <!-- Form Section -->
   <section class="max-w-2xl mx-auto my-16 px-4">
     <h1 class="text-4xl font-bold text-blue-900 text-center mb-4">Become a Collaborator</h1>
@@ -97,9 +113,15 @@
   </div>
 
   <!-- Confetti Library -->
-  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 
   <script>
+    // Navbar toggle
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+
+    // Form handling
     const form = document.getElementById('collabForm');
     const spinner = document.getElementById('spinner');
     const popupOverlay = document.getElementById('successPopup');
@@ -115,14 +137,12 @@
       popupCard.classList.remove('scale-0');
       popupCard.classList.add('scale-100');
     }
-
     function hidePopup() {
       popupOverlay.classList.add('pointer-events-none', 'opacity-0');
       popupOverlay.classList.remove('opacity-100');
       popupCard.classList.remove('scale-100');
       popupCard.classList.add('scale-0');
     }
-
     popupClose.addEventListener('click', hidePopup);
 
     function launchConfetti() {
@@ -165,10 +185,7 @@
         launchConfetti();
         form.reset();
 
-        // Redirect after 5s
-        setTimeout(() => {
-          window.location.href = '../index.html';
-        }, 5000);
+        setTimeout(() => window.location.href = '../index.html', 5000);
       })
       .catch(error => {
         spinner.classList.add('hidden');
@@ -181,6 +198,39 @@
         console.error(error);
       });
     });
+
+    // Disable right-click
+    document.addEventListener('contextmenu', e => {
+      e.preventDefault();
+      alert("Right-click is disabled on this page!");
+    });
+
+    // Detect DevTools shortcuts
+    document.addEventListener('keydown', e => {
+      if (
+        e.key === "F12" ||
+        (e.ctrlKey && e.shiftKey && (e.key === "I" || e.key === "J")) ||
+        (e.ctrlKey && e.key === "U")
+      ) {
+        e.preventDefault();
+        alert("Developer tools are disabled on this page!");
+      }
+    });
+
+    // Detect DevTools via window size
+    let devtoolsOpen = false;
+    const threshold = 160;
+    setInterval(() => {
+      const widthThreshold = window.outerWidth - window.innerWidth > threshold;
+      const heightThreshold = window.outerHeight - window.innerHeight > threshold;
+      if ((widthThreshold || heightThreshold) && !devtoolsOpen) {
+        devtoolsOpen = true;
+        alert("Developer tools detected! Please close it to continue.");
+      } else if (!(widthThreshold || heightThreshold)) {
+        devtoolsOpen = false;
+      }
+    }, 1000);
   </script>
+  
 </body>
 </html>
