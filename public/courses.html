@@ -294,85 +294,102 @@
     </div>
   </footer>
 
-  <!-- Profile Popup -->
-  <div id="user-popup">
-    <div id="user-popup-content">
-      <p id="user-name">Name: <span>Loading...</span></p>
-      <p id="user-email">Email: <span>Loading...</span></p>
-      <p id="user-branch">Branch: <span>Loading...</span></p>
-      <p id="user-regulation">Regulation: <span>Loading...</span></p>
-      <p id="user-college">College: <span>Loading...</span></p>
-      <p id="user-university">University: <span>Loading...</span></p>
-      <button id="close-profile">Close</button>
-      <button id="logout-btn" onclick="logout()">Logout</button>
-    </div>
+<!-- Profile Popup -->
+<div id="user-popup">
+  <div id="user-popup-content">
+    <p id="user-name">Name: <span>Loading...</span></p>
+    <p id="user-email">Email: <span>Loading...</span></p>
+    <p id="user-branch">Branch: <span>Loading...</span></p>
+    <p id="user-regulation">Regulation: <span>Loading...</span></p>
+    <p id="user-college">College: <span>Loading...</span></p>
+    <p id="user-university">University: <span>Loading...</span></p>
+    <button id="close-profile">Close</button>
+    <button id="logout-btn">Logout</button>
   </div>
+</div>
 
-  <script>
-    const firebaseConfig = {
-      apiKey: "AIzaSyBB31ymV2vgVHVgA4Tp_jUZLy4c8VUkPY4",
-      authDomain: "scient-e-library.firebaseapp.com",
-      projectId: "scient-e-library",
-      storageBucket: "scient-e-library.appspot.com",
-      messagingSenderId: "724674392756",
-      appId: "1:724674392756:web:631eb7c59445f5a2509de1"
-    };
+<script>
+  const firebaseConfig = {
+    apiKey: "AIzaSyBB31ymV2vgVHVgA4Tp_jUZLy4c8VUkPY4",
+    authDomain: "scient-e-library.firebaseapp.com",
+    projectId: "scient-e-library",
+    storageBucket: "scient-e-library.appspot.com",
+    messagingSenderId: "724674392756",
+    appId: "1:724674392756:web:631eb7c59445f5a2509de1"
+  };
 
-    firebase.initializeApp(firebaseConfig);
-    const auth = firebase.auth();
-    const db = firebase.firestore();
+  firebase.initializeApp(firebaseConfig);
+  const auth = firebase.auth();
+  const db = firebase.firestore();
 
-    auth.onAuthStateChanged(user => {
-      if (user) {
-        document.getElementById("main-content").style.display = "block";
-        document.getElementById("loading-screen").style.display = "none";
-        document.documentElement.style.visibility = "visible";
+  // Helper to safely update profile fields
+  function setField(id, value) {
+    const span = document.querySelector(`#${id} span`);
+    if (span) span.textContent = value || "N/A";
+  }
 
-        db.collection("users").where("uid", "==", user.uid).get().then(snapshot => {
-          if (!snapshot.empty) {
-            const data = snapshot.docs[0].data();
-            document.getElementById("user-name").innerHTML = `Name: <span>${data.name || "N/A"}</span>`;
-            document.getElementById("user-email").innerHTML = `Email: <span>${data.email || user.email}</span>`;
-            document.getElementById("user-branch").innerHTML = `Branch: <span>${data.branch || "N/A"}</span>`;
-            document.getElementById("user-regulation").innerHTML = `Regulation: <span>${data.regulation || "N/A"}</span>`;
-            document.getElementById("user-college").innerHTML = `College: <span>${data.college || "N/A"}</span>`;
-            document.getElementById("user-university").innerHTML = `University: <span>${data.university || "N/A"}</span>`;
+  auth.onAuthStateChanged(user => {
+    if (user) {
+      document.getElementById("main-content").style.display = "block";
+      document.getElementById("loading-screen").style.display = "none";
+      document.documentElement.style.visibility = "visible";
+
+      // Fetch user doc directly by UID (matches Firestore rules)
+      db.collection("users").doc(user.uid).get()
+        .then(doc => {
+          if (doc.exists) {
+            const data = doc.data();
+            setField("user-name", data.name);
+            setField("user-email", data.email || user.email);
+            setField("user-branch", data.branch);
+            setField("user-regulation", data.regulation);
+            setField("user-college", data.college);
+            setField("user-university", data.university);
+          } else {
+            console.warn("No profile found for UID:", user.uid);
           }
-        });
-      } else {
-        window.location.href = "login.html";
-      }
-    });
-
-    function logout() {
-      auth.signOut().then(() => {
-        window.location.href = "login.html";
-      });
+        })
+        .catch(err => console.error("Error fetching profile:", err));
+    } else {
+      window.location.href = "login.html";
     }
+  });
 
-    function toggleProfilePopup(show) {
-      document.getElementById("user-popup").style.display = show ? "flex" : "none";
-    }
+  // Logout
+  document.getElementById("logout-btn").addEventListener("click", () => {
+    auth.signOut().then(() => window.location.href = "login.html");
+  });
 
-    document.getElementById("profile-icon").addEventListener("click", () => toggleProfilePopup(true));
-    document.getElementById("close-profile").addEventListener("click", () => toggleProfilePopup(false));
+  // Toggle profile popup
+  function toggleProfilePopup(show) {
+    document.getElementById("user-popup").style.display = show ? "flex" : "none";
+  }
 
-    function showPopup(event) {
-      event.preventDefault();
-      alert("Currently under maintenance. We are updating resources.");
-    }
+  document.getElementById("profile-icon").addEventListener("click", () => toggleProfilePopup(true));
+  document.getElementById("close-profile").addEventListener("click", () => toggleProfilePopup(false));
 
-    // Disable right-click and F12
-    document.addEventListener("contextmenu", e => {
+  // Maintenance alert (if needed)
+  function showPopup(event) {
+    event.preventDefault();
+    alert("Currently under maintenance. We are updating resources.");
+  }
+
+  // Disable right-click and DevTools shortcuts
+  document.addEventListener("contextmenu", e => {
+    e.preventDefault();
+    alert("Right-click is disabled for security.");
+  });
+
+  document.addEventListener("keydown", e => {
+    if (
+      e.key === "F12" ||
+      (e.ctrlKey && e.shiftKey && ["I","J","C"].includes(e.key)) ||
+      (e.ctrlKey && e.key === "U")
+    ) {
       e.preventDefault();
-      alert("Right-click is disabled for security.");
-    });
+    }
+  });
+</script>
 
-    document.addEventListener("keydown", e => {
-      if (e.key === "F12" || (e.ctrlKey && e.shiftKey && ["I", "J", "C"].includes(e.key)) || (e.ctrlKey && e.key === "U")) {
-        e.preventDefault();
-      }
-    });
-  </script>
 </body>
 </html>
