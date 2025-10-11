@@ -2,213 +2,197 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact Us | Scient E-Library</title>
   <link rel="icon" type="image/png" href="logo11.jpg">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 
   <style>
+    * {
+      box-sizing: border-box;
+    }
     body {
-      font-family: 'Arial', sans-serif;
-      background-color: #f4f6f8;
+      font-family: "Poppins", Arial, sans-serif;
+      background: #f4f6f8;
       margin: 0;
-      padding: 0;
+      color: #333;
     }
 
-    header {
-      background: linear-gradient(135deg, #002f6c, #00509e);
-      color: white;
-      padding: 1.5rem 0;
-      text-align: center;
-    }
-
+    /* ===== Navbar ===== */
     .navbar {
-      background-color: #003366;
+      background: linear-gradient(135deg, #002f6c, #00509e);
       padding: 1rem 2rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
       color: white;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
     .navbar a {
       text-decoration: none;
       color: white;
       margin-left: 1.5rem;
-      font-weight: bold;
+      font-weight: 600;
+      transition: 0.3s;
     }
     .navbar a:hover {
-      color: #fff;
-      background-color: #004b99;
-      padding: 0.25rem 0.5rem;
-      border-radius: 5px;
+      color: #ffeb3b;
     }
-
     .menu-toggle {
       display: none;
-      font-size: 2rem;
+      font-size: 1.8rem;
       cursor: pointer;
     }
-
     .nav-links {
       display: flex;
+      align-items: center;
     }
 
     @media (max-width: 768px) {
       .menu-toggle {
         display: block;
       }
-
       .nav-links {
         display: none;
         flex-direction: column;
-        width: 100%;
-        background-color: #003366;
         position: absolute;
-        top: 0;
+        top: 64px;
         right: 0;
-        padding: 1rem;
-        z-index: 100;
+        width: 100%;
+        background: #003366;
+        padding: 1rem 0;
       }
-
       .nav-links.open {
         display: flex;
+        animation: slideDown 0.3s ease;
       }
-
       .nav-links a {
-        padding: 0.5rem 0;
-        border-bottom: 1px solid #ccc;
+        padding: 0.75rem;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
       }
-
-      .nav-links a:last-child {
-        border-bottom: none;
+      @keyframes slideDown {
+        from { opacity: 0; transform: translateY(-10px); }
+        to { opacity: 1; transform: translateY(0); }
       }
     }
 
+    /* ===== Contact Form ===== */
     .contact-form-section {
-      padding: 2rem 1rem;
+      padding: 3rem 1rem;
       text-align: center;
     }
-
     .contact-form-section h2 {
       color: #002f6c;
-      font-size: 1.875rem;
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
     }
-
     .contact-form {
       max-width: 600px;
-      margin: 0 auto;
-      background-color: white;
+      margin: 2rem auto;
+      background: #fff;
       padding: 1.5rem;
-      border-radius: 0.5rem;
-      box-shadow: 0 0.25rem 0.375rem rgba(0,0,0,0.1);
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     }
-
     .contact-form input,
     .contact-form textarea {
       width: 100%;
-      padding: 0.75rem;
+      padding: 0.8rem;
       margin: 0.5rem 0;
       border: 1px solid #ccc;
-      border-radius: 0.25rem;
-      box-sizing: border-box;
+      border-radius: 6px;
+      font-size: 1rem;
     }
-
     .contact-form input:focus,
     .contact-form textarea:focus {
-      border: 2px solid #0073e6;
+      border-color: #00509e;
       outline: none;
-      box-shadow: 0 0 6px rgba(0, 115, 230, 0.3);
+      box-shadow: 0 0 8px rgba(0,80,158,0.3);
     }
-
     .contact-form button {
       background: linear-gradient(90deg, #0052cc, #0073e6);
       color: white;
-      padding: 0.75rem 1.5rem;
+      padding: 0.8rem 2rem;
       border: none;
-      border-radius: 0.3125rem;
+      border-radius: 6px;
       font-size: 1rem;
       cursor: pointer;
-      box-shadow: 0 4px 10px rgba(0, 82, 204, 0.3);
-      transition: background 0.3s, transform 0.3s;
+      transition: all 0.3s ease;
     }
-
-    .contact-form button:hover,
-    .contact-form button:active {
+    .contact-form button:hover {
       background: linear-gradient(90deg, #0041a3, #0066cc);
       transform: scale(1.05);
     }
-
-    .contact-info-section {
-      padding: 2rem 1rem;
-      background: linear-gradient(to right, #eaf4ff, #f5fbff);
-    }
-
-    .contact-info-section h3 {
-      color: #002f6c;
-      font-size: 1.5rem;
-    }
-
-    .contact-details {
-      display: flex;
-      justify-content: space-around;
-      margin-top: 1.5rem;
-      flex-wrap: wrap;
-    }
-
-    .contact-details div {
-      text-align: center;
-      margin: 1rem;
-    }
-
-    .contact-details i {
-      font-size: 2rem;
-      color: #002f6c;
-    }
-
-    .contact-details a {
-      text-decoration: none;
-      color: #0056b3;
-      font-weight: bold;
-    }
-
-    .contact-details a:hover {
-      text-decoration: underline;
-    }
-
-    footer {
-      background-color: #7cb0e4;
-      padding: 1.5rem;
-      text-align: center;
-    }
-
-    .social-media a {
-      margin: 0 0.625rem;
-      font-size: 1.5rem;
-      display: inline-block;
-    }
-
-    .fab.fa-facebook { color: #1877f2; }
-    .fab.fa-twitter { color: #1da1f2; }
-    .fab.fa-instagram { color: #e1306c; }
-    .fab.fa-linkedin { color: #0a66c2; }
-
-    .social-media a:hover i {
-      text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
-      transform: scale(1.2);
-    }
-
     #response-message {
       font-weight: bold;
-      margin-top: 0.9375rem;
-      color: green;
+      margin-top: 1rem;
+      color: #007c0d;
     }
+
+    /* ===== Contact Info ===== */
+    .contact-info-section {
+      background: linear-gradient(to right, #eaf4ff, #f5fbff);
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+    .contact-info-section h3 {
+      color: #002f6c;
+      margin-bottom: 1rem;
+    }
+    .contact-details {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+    .contact-details div {
+      text-align: center;
+      width: 280px;
+    }
+    .contact-details i {
+      font-size: 2rem;
+      color: #00509e;
+    }
+    .contact-details a {
+      text-decoration: none;
+      color: #004b99;
+      font-weight: 600;
+    }
+
+    /* ===== Footer ===== */
+    footer {
+      background: #002f6c;
+      color: white;
+      text-align: center;
+      padding: 1.5rem;
+      font-size: 0.9rem;
+    }
+    footer h5 {
+      margin: 1rem 0 0.5rem;
+      font-size: 1rem;
+    }
+    .social-media a {
+      margin: 0 10px;
+      font-size: 1.5rem;
+      display: inline-block;
+      transition: transform 0.3s;
+    }
+    .social-media a:hover {
+      transform: scale(1.2);
+    }
+    .fa-facebook { color: #1877f2; }
+    .fa-twitter { color: #1da1f2; }
+    .fa-instagram { color: #e1306c; }
+    .fa-linkedin { color: #0a66c2; }
   </style>
 </head>
+
 <body>
 
   <header class="navbar">
-    <a href="/" class="text-xl">Scient E-Library</a>
+    <a href="index.html">Scient E-Library</a>
     <div class="menu-toggle" id="menu-toggle"><i class="fas fa-bars"></i></div>
     <div class="nav-links" id="nav-links">
       <a href="index.html">Home</a>
@@ -219,48 +203,45 @@
     </div>
   </header>
 
-  <div class="contact-form-section">
+  <section class="contact-form-section">
     <h2>We'd Love to Hear From You</h2>
-    <p>If you have any questions, suggestions, or feedback, feel free to reach out using the form below.</p>
+    <p>Have a question, suggestion, or feedback? Send us a message below.</p>
 
     <form id="contact-form" class="contact-form">
-      <input type="text" name="from_name" placeholder="Your Name" required aria-label="Your Name">
-      <input type="email" name="from_email" placeholder="Your Email" required aria-label="Your Email">
-      <textarea name="message" rows="5" placeholder="Your Message" required aria-label="Your Message"></textarea>
-      <button type="submit" aria-label="Send Message">Send Message</button>
+      <input type="text" name="from_name" placeholder="Your Name" required>
+      <input type="email" name="from_email" placeholder="Your Email" required>
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
     </form>
     <p id="response-message"></p>
-  </div>
+  </section>
 
-  <div class="contact-info-section">
+  <section class="contact-info-section">
     <h3>Contact Information</h3>
-    <p>Feel free to reach out to us through any of the following means:</p>
     <div class="contact-details">
       <div>
         <a href="mailto:scient.e.library.info@gmail.com">
           <i class="fas fa-envelope"></i>
-          <p>Email: scient.e.library.info@gmail.com</p>
+          <p>scient.e.library.info@gmail.com</p>
         </a>
       </div>
       <div>
         <a href="https://www.google.com/maps?q=Scient+Institute+of+Technology,+Ibrahimpatnam" target="_blank">
           <i class="fas fa-map-marker-alt"></i>
-          <p>Location: Scient Institute of Technology, Ibrahimpatnam, Telangana 501506</p>
+          <p>Scient Institute of Technology, Ibrahimpatnam, Telangana 501506</p>
         </a>
       </div>
     </div>
-  </div>
+  </section>
 
   <footer>
-    <p>© 2024 Scient E-Library. All rights reserved. | Developed by Varun Goud & Team | Dept. of CSE (AY 2022-2026)</p>
-    <div>
-      <h5>FOLLOW US ON</h5>
-      <div class="social-media">
-        <a href="https://www.facebook.com" target="_blank" aria-label="Follow us on Facebook"><i class="fab fa-facebook"></i></a>
-        <a href="https://www.twitter.com" target="_blank" aria-label="Follow us on Twitter"><i class="fab fa-twitter"></i></a>
-        <a href="https://www.instagram.com/varungoud___21/" target="_blank" aria-label="Follow us on Instagram"><i class="fab fa-instagram"></i></a>
-        <a href="https://www.linkedin.com/in/bandi-varun-goud" target="_blank" aria-label="Follow us on LinkedIn"><i class="fab fa-linkedin"></i></a>
-      </div>
+    <p>© 2025 Scient E-Library | Developed by Varun Goud & Team | Dept. of CSE (AY 2022–2026)</p>
+    <h5>Follow Us On</h5>
+    <div class="social-media">
+      <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+      <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+      <a href="https://instagram.com/varungoud___21/" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://linkedin.com/in/bandi-varun-goud" target="_blank"><i class="fab fa-linkedin"></i></a>
     </div>
   </footer>
 
@@ -270,47 +251,38 @@
       emailjs.init("DJnB8i1ZXCRJ0-cya");
     })();
 
-    document.getElementById('contact-form').addEventListener('submit', function(event) {
+    document.getElementById("contact-form").addEventListener("submit", function(event){
       event.preventDefault();
+      const response = document.getElementById("response-message");
       emailjs.sendForm('service_icj1e45', 'template_tnw55qt', this)
-        .then(() => {
-          document.getElementById('response-message').textContent = "Thank you! We’ll contact you soon.";
-          this.reset();
-        }, (error) => {
-          document.getElementById('response-message').textContent = "Oops! Something went wrong.";
-          console.error('FAILED...', error);
-        });
+      .then(() => {
+        response.style.color = "green";
+        response.textContent = "✅ Message sent successfully! We'll get back soon.";
+        this.reset();
+      })
+      .catch(error => {
+        response.style.color = "red";
+        response.textContent = "⚠️ Failed to send. Please try again later.";
+        console.error(error);
+      });
     });
 
-    const menuToggle = document.getElementById("menu-toggle");
-    const navLinks = document.getElementById("nav-links");
-    menuToggle.addEventListener("click", () => {
-      navLinks.classList.toggle("open");
+    document.getElementById("menu-toggle").addEventListener("click", () => {
+      document.getElementById("nav-links").classList.toggle("open");
     });
   </script>
-  
-    <script>
-      document.addEventListener("contextmenu", e => e.preventDefault());
-   document.addEventListener("keydown", e => {
-     if (e.key === "F12" || (e.ctrlKey && e.shiftKey && ["I", "J", "C"].includes(e.key)) || (e.ctrlKey && e.key === "U")) {
-       e.preventDefault();
-     }
-   });
- 
-  
-   document.oncontextmenu = () => {
-     alert("Right-click is disabled for security purposes.");
-     return false;
-   };
- 
 
-   document.onkeydown = (e) => {
-     if (e.keyCode === 123 || (e.ctrlKey && e.shiftKey && e.keyCode === 73)) {
-       alert("Inspect Element is disabled.");
-       return false;
-     }
-   }
- </script>
+  <!-- Disable inspect / right click -->
+  <script>
+    document.addEventListener("contextmenu", e => e.preventDefault());
+    document.addEventListener("keydown", e => {
+      if (
+        e.key === "F12" ||
+        (e.ctrlKey && e.shiftKey && ["I","J","C"].includes(e.key)) ||
+        (e.ctrlKey && e.key === "U")
+      ) e.preventDefault();
+    });
+  </script>
 
 </body>
 </html>

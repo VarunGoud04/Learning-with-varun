@@ -7,25 +7,22 @@
   <title>Machine Learning | Scient E-Library</title>
   <link rel="icon" type="image/png" href="logo11.jpg" />
 
+  <!-- SEO Meta -->
+  <meta name="description" content="Scient E-Library — Machine Learning resources for JNTUH R22 including important questions, notes, and previous papers.">
+  <meta name="keywords" content="Machine Learning, JNTUH, R22, Scient E-Library, Notes, Previous Papers, Important Questions">
+
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
   <!-- Font Awesome -->
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <script defer src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
   <style>
-    .navbar a:hover {
-      color: #ffeb3b;
-      transition: color 0.3s ease;
-    }
-    footer {
-      background-color: #1a202c;
-      color: white;
-      padding: 2rem;
-      text-align: center;
-    }
-    footer a {
-      color: #ffeb3b;
-    }
+    html { scroll-behavior: smooth; }
+    .navbar a:hover { color: #ffeb3b; transition: color 0.3s ease; }
+    .navbar a.active { color: #ffeb3b; }
+    footer { background-color: #1a202c; color: white; padding: 2rem; text-align: center; }
+    footer a { color: #ffeb3b; }
+
     .cta-button {
       background-color: #002f6c;
       color: white;
@@ -35,22 +32,11 @@
       transition: background-color 0.3s, transform 0.3s;
       display: inline-block;
     }
-    .cta-button:hover {
-      background-color: #003366;
-      transform: scale(1.05);
-    }
-    .card {
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
-    .card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
-    }
-    .disabled-btn {
-      opacity: 0.6;
-      cursor: not-allowed;
-    }
-    /* Modal Styles */
+    .cta-button:hover { background-color: #003366; transform: scale(1.05); }
+    .card { transition: transform 0.3s, box-shadow 0.3s; }
+    .card:hover { transform: translateY(-10px); box-shadow: 0 8px 15px rgba(0,0,0,0.1); }
+
+    /* Modal */
     .modal {
       display: none;
       position: fixed;
@@ -59,6 +45,10 @@
       justify-content: center;
       align-items: center;
       z-index: 1000;
+      animation: fadeIn 0.3s ease;
+    }
+    @keyframes fadeIn {
+      from {opacity: 0;} to {opacity: 1;}
     }
     .modal-content {
       background: #fff;
@@ -77,9 +67,7 @@
       cursor: pointer;
       transition: background 0.3s;
     }
-    .modal-close:hover {
-      background-color: #003366;
-    }
+    .modal-close:hover { background-color: #003366; }
   </style>
 </head>
 
@@ -88,7 +76,7 @@
   <!-- Navbar -->
   <nav class="bg-blue-800 text-white sticky top-0 z-50 shadow-md">
     <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
-      <a href="#home" class="text-2xl font-semibold">Scient E-Library</a>
+      <a href="index.html" class="text-2xl font-semibold">Scient E-Library</a>
       <button id="menu-toggle" class="md:hidden text-white focus:outline-none">
         <i class="fas fa-bars text-2xl"></i>
       </button>
@@ -110,36 +98,37 @@
   </section>
 
   <!-- Important Questions -->
-  <section id="important-questions" class="bg-gray-50 text-center py-16 px-4">
-    <h2 class="text-3xl font-semibold text-blue-900">Important Questions - ML</h2>
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
-      <div class="card p-6 bg-white rounded-lg shadow-md">
-        <h3 class="text-xl font-semibold text-blue-900">Unit 1</h3>
-        <p class="mt-4">Introduction to ML, Applications, Types</p>
-        <a href="#" class="cta-button mt-4 disabled-btn course-link">Download</a>
-      </div>
-      <div class="card p-6 bg-white rounded-lg shadow-md">
-        <h3 class="text-xl font-semibold text-blue-900">Unit 2</h3>
-        <p class="mt-4">Regression Algorithms, Performance</p>
-        <a href="#" class="cta-button mt-4 disabled-btn course-link">Download</a>
-      </div>
-      <div class="card p-6 bg-white rounded-lg shadow-md">
-        <h3 class="text-xl font-semibold text-blue-900">Unit 3</h3>
-        <p class="mt-4">Classification Techniques, Decision Trees</p>
-        <a href="#" class="cta-button mt-4 disabled-btn course-link">Download</a>
-      </div>
-      <div class="card p-6 bg-white rounded-lg shadow-md">
-        <h3 class="text-xl font-semibold text-blue-900">Unit 4</h3>
-        <p class="mt-4">Unsupervised Learning, Clustering</p>
-        <a href="#" class="cta-button mt-4 disabled-btn course-link">Download</a>
-      </div>
-      <div class="card p-6 bg-white rounded-lg shadow-md">
-        <h3 class="text-xl font-semibold text-blue-900">Unit 5</h3>
-        <p class="mt-4">Ensemble Models & Model Selection</p>
-        <a href="#" class="cta-button mt-4 disabled-btn course-link">Download</a>
-      </div>
+<section id="reference-notes" class="bg-gray-50 text-center py-16 px-4">
+  <h2 class="text-3xl font-semibold text-blue-900">Reference Notes - ML</h2>
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
+    <div class="card p-6 bg-white rounded-lg shadow-md">
+      <h3 class="text-xl font-semibold text-blue-900">Unit 1</h3>
+      <p class="mt-4">Introduction to ML, Applications, Types</p>
+      <a href="https://drive.google.com/file/d/1vUqIbfy6qlD3xlxyQK0rmtfxpasUTdFx/view?usp=drive_link" class="cta-button mt-4 course-link">Download</a>
     </div>
-  </section>
+    <div class="card p-6 bg-white rounded-lg shadow-md">
+      <h3 class="text-xl font-semibold text-blue-900">Unit 2</h3>
+      <p class="mt-4">Regression Algorithms, Performance</p>
+      <a href="https://drive.google.com/file/d/1FIYIh3-7qejRVAXqWfYdxc6JS_F0ua0c/view?usp=drive_link" class="cta-button mt-4 course-link">Download</a>
+    </div>
+    <div class="card p-6 bg-white rounded-lg shadow-md">
+      <h3 class="text-xl font-semibold text-blue-900">Unit 3</h3>
+      <p class="mt-4">Classification Techniques, Decision Trees</p>
+      <a href="#" class="cta-button mt-4 disabled-btn course-link">Download</a>
+    </div>
+    <div class="card p-6 bg-white rounded-lg shadow-md">
+      <h3 class="text-xl font-semibold text-blue-900">Unit 4</h3>
+      <p class="mt-4">Unsupervised Learning, Clustering</p>
+      <a href="https://drive.google.com/file/d/1sy6ZxtlavzABoVMMHStD1zrNVwEUHowx/view?usp=drive_link" class="cta-button mt-4 course-link">Download</a>
+    </div>
+    <div class="card p-6 bg-white rounded-lg shadow-md">
+      <h3 class="text-xl font-semibold text-blue-900">Unit 5</h3>
+      <p class="mt-4">Ensemble Models & Model Selection</p>
+      <a href="https://drive.google.com/file/d/1wOdVGvaRXZtECTLH7bP4OSL1ybwBgv_T/view?usp=drive_link" class="cta-button mt-4 course-link">Download</a>
+    </div>
+  </div>
+</section>
+
 
   <!-- Previous Year Questions -->
   <section id="previous-questions" class="bg-blue-100 text-center py-16 px-4">
@@ -148,56 +137,46 @@
       <div class="card p-6 bg-white rounded-lg shadow-md">
         <h3 class="text-xl font-semibold text-blue-900">2022 Regular</h3>
         <p class="mt-4">ML Introduction, Regression</p>
-        <a href="#" class="cta-button mt-4 disabled-btn course-link">Download</a>
+        <button onclick="showModal()" class="cta-button mt-4 opacity-70 cursor-not-allowed">Coming Soon</button>
       </div>
       <div class="card p-6 bg-white rounded-lg shadow-md">
         <h3 class="text-xl font-semibold text-blue-900">2023 Supply</h3>
         <p class="mt-4">Clustering and KNN Algorithms</p>
-        <a href="#" class="cta-button mt-4 disabled-btn course-link">Download</a>
+        <button onclick="showModal()" class="cta-button mt-4 opacity-70 cursor-not-allowed">Coming Soon</button>
       </div>
       <div class="card p-6 bg-white rounded-lg shadow-md">
         <h3 class="text-xl font-semibold text-blue-900">JNTUH Portal</h3>
         <p class="mt-4">Official Download Link</p>
-        <a href="#" class="cta-button mt-4 disabled-btn course-link">View</a>
+        <button onclick="showModal()" class="cta-button mt-4 opacity-70 cursor-not-allowed">Coming Soon</button>
       </div>
     </div>
   </section>
 
   <!-- Reference Notes -->
-  <section id="reference-notes" class="bg-white text-center py-16 px-4">
-    <h2 class="text-3xl font-semibold text-blue-900">Reference Notes - ML</h2>
+  <section id="Important questions" class="bg-white text-center py-16 px-4">
+    <h2 class="text-3xl font-semibold text-blue-900">Important Questions  - ML</h2>
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
       <div class="card p-6 bg-white rounded-lg shadow-md">
-        <h3 class="text-xl font-semibold text-blue-900">Unit 1 Notes</h3>
+        <h3 class="text-xl font-semibold text-blue-900">Unit 1 Questions</h3>
         <p class="mt-4">Overview of ML & Learning Types</p>
-        <a href="#" class="cta-button mt-4 disabled-btn course-link">Download</a>
+        <button onclick="showModal()" class="cta-button mt-4 opacity-70 cursor-not-allowed">Coming Soon</button>
       </div>
       <div class="card p-6 bg-white rounded-lg shadow-md">
-        <h3 class="text-xl font-semibold text-blue-900">Unit 2 Notes</h3>
+        <h3 class="text-xl font-semibold text-blue-900">Unit 2 questions</h3>
         <p class="mt-4">Linear & Logistic Regression</p>
-        <a href="#" class="cta-button mt-4 disabled-btn course-link">Download</a>
+        <button onclick="showModal()" class="cta-button mt-4 opacity-70 cursor-not-allowed">Coming Soon</button>
       </div>
       <div class="card p-6 bg-white rounded-lg shadow-md">
-        <h3 class="text-xl font-semibold text-blue-900">Unit 3 Notes</h3>
+        <h3 class="text-xl font-semibold text-blue-900">Unit 3 questions</h3>
         <p class="mt-4">Classification, Naive Bayes</p>
-        <a href="#" class="cta-button mt-4 disabled-btn course-link">Download</a>
-      </div>
-      <div class="card p-6 bg-white rounded-lg shadow-md">
-        <h3 class="text-xl font-semibold text-blue-900">Unit 4 Notes</h3>
-        <p class="mt-4">K-Means, DBSCAN</p>
-        <a href="#" class="cta-button mt-4 disabled-btn course-link">Download</a>
-      </div>
-      <div class="card p-6 bg-white rounded-lg shadow-md">
-        <h3 class="text-xl font-semibold text-blue-900">Unit 5 Notes</h3>
-        <p class="mt-4">Ensemble Models: Bagging, Boosting</p>
-        <a href="#" class="cta-button mt-4 disabled-btn course-link">Download</a>
+        <button onclick="showModal()" class="cta-button mt-4 opacity-70 cursor-not-allowed">Coming Soon</button>
       </div>
     </div>
   </section>
 
   <!-- Footer -->
   <footer class="mt-12">
-    <p>&copy; 2024 Scient E-Library. All rights reserved. | Developed by Varun Goud & Team | Department of CSE (AY 2022–2026).</p>
+    <p>&copy; 2025 Scient E-Library. All rights reserved. | Developed by Varun Goud & Team | Department of CSE (AY 2022–2026).</p>
     <div class="mt-4">
       <a href="privacy.html" class="hover:text-yellow-400">Privacy Policy</a> |
       <a href="terms.html" class="hover:text-yellow-400">Terms of Service</a>
@@ -218,30 +197,41 @@
     const toggleBtn = document.getElementById('menu-toggle');
     const menu = document.getElementById('menu');
     const modal = document.getElementById('server-error-modal');
-    const courseLinks = document.querySelectorAll('.course-link');
 
-    toggleBtn.addEventListener('click', () => {
-      menu.classList.toggle('hidden');
-    });
+    toggleBtn.addEventListener('click', () => menu.classList.toggle('hidden'));
 
-    // Open modal on disabled button click
-    courseLinks.forEach(link => {
-      link.addEventListener('click', (e) => {
-        e.preventDefault();
-        modal.style.display = 'flex';
-      });
-    });
+    // Show Modal
+    function showModal() {
+      modal.style.display = 'flex';
+    }
 
-    // Close modal
+    // Close Modal
     function closeModal() {
       modal.style.display = 'none';
     }
 
-    // Disable right-click & inspect
-    document.oncontextmenu = () => {
-      alert("Right-click is disabled for security purposes.");
-      return false;
+    // Close on outside click
+    window.onclick = (e) => {
+      if (e.target === modal) modal.style.display = 'none';
     };
+
+    // Highlight active nav link
+    const sections = document.querySelectorAll("section");
+    const navLinks = document.querySelectorAll(".navbar a");
+    window.addEventListener("scroll", () => {
+      let current = "";
+      sections.forEach(sec => {
+        const sectionTop = sec.offsetTop - 100;
+        if (pageYOffset >= sectionTop) current = sec.getAttribute("id");
+      });
+      navLinks.forEach(a => {
+        a.classList.remove("active");
+        if (a.getAttribute("href").includes(current)) a.classList.add("active");
+      });
+    });
+
+    // Disable right-click & inspect
+    document.oncontextmenu = () => { alert("Right-click is disabled for security purposes."); return false; };
     document.onkeydown = (e) => {
       if (e.keyCode === 123 || (e.ctrlKey && e.shiftKey && e.keyCode === 73)) {
         alert("Inspect Element is disabled.");
