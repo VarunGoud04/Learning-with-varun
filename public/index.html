@@ -1,358 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <meta name="google-site-verification" content="4lgK9QHpLUQxiEqFLJgKxzfaRZZqlApySO2SZ-Heexg" />
-<meta name="description" content="Scient E-Library is a student-developed platform by B. Varun Goud from Scient Institute of Technology, offering JNTUH R22 CSE notes, question papers & digital resources." />
-
-  <meta name="description" content="Scient E-Library is a student-developed platform offering JNTUH R22 CSE notes, previous papers, important questions, and digital study resources. Developed by B. Varun Goud, student of Scient Institute of Technology, Ibrahimpatnam." />
-  <meta name="keywords" content="Scient E-Library, JNTUH R22, CSE Notes, Engineering Resources, Scient College, Previous Papers, Varun Goud, AI ML Notes, Digital Library" />
-  <meta name="author" content="B. Varun Goud" />
-  <meta name="robots" content="index, follow" />
-  <meta http-equiv="refresh" content="5; url=https://varunteckworks.vercel.app">
-
-
-  <!-- Apple Touch Icon Fix -->
-  <link rel="apple-touch-icon" href="logo11.jpg">
-
-  <!-- Open Graph / Facebook -->
-  <meta property="og:site_name" content="Scient E-Library" />
-  <meta property="og:title" content="Scient E-Library | JNTUH R22 CSE Resources" />
-  <meta property="og:description" content="Access well-organized notes, question banks, and academic tools curated for JNTUH R22 CSE students. Developed by B. Varun Goud, student of Scient Institute of Technology, Ibrahimpatnam." />
-  <meta property="og:image" content="https://scient-e-library.vercel.app/logo11.jpg" />
-  <meta property="og:url" content="https://scient-e-library.vercel.app/" />
-  <meta property="og:type" content="website" />
-
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Scient E-Library | JNTUH R22 CSE" />
-  <meta name="twitter:description" content="Built by Scient students — a free platform to access notes, previous papers, and academic resources for R22 curriculum. Developed by B. Varun Goud, Scient Institute of Technology." />
-  <meta name="twitter:image" content="https://scient-e-library.vercel.app/logo11.jpg" />
-
-  <!-- Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "Scient E-Library",
-    "url": "https://scient-e-library.vercel.app",
-    "creator": {
-      "@type": "Person",
-      "name": "B. Varun Goud",
-      "affiliation": {
-        "@type": "CollegeOrUniversity",
-        "name": "Scient Institute of Technology",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Ibrahimpatnam",
-          "addressRegion": "Telangana",
-          "addressCountry": "India"
-        }
-      },
-      "url": "https://www.linkedin.com/in/bandi-varun-goud"
-    },
-    "potentialAction": {
-      "@type": "SearchAction",
-      "target": "https://scient-e-library.vercel.app/?q={search_term_string}",
-      "query-input": "required name=search_term_string"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "Scient E-Library",
-      "url": "https://scient-e-library.vercel.app"
-    }
-  }
-  </script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "B. Varun Goud",
-  "url": "https://www.linkedin.com/in/bandi-varun-goud",
-  "affiliation": {
-    "@type": "CollegeOrUniversity",
-    "name": "Scient Institute of Technology, Ibrahimpatnam"
-  },
-  "jobTitle": "Web Developer",
-  "sameAs": [
-    "https://www.linkedin.com/in/bandi-varun-goud"
-  ]
-}
-</script>
-
-
-  <title>Scient E-Library | JNTUH R22 Notes, Papers & More</title>
-  <link rel="icon" type="image/png" href="logo11.jpg" />
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome to LearnWithVarunGoud!</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 
   <style>
-    .cta-button {
-      background-color: #002f6c;
-      color: white;
-      padding: 12px 25px;
-      text-decoration: none;
-      border-radius: 5px;
-      transition: background-color 0.3s, transform 0.3s;
+    /* Bounce animation for icon */
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+    }
+    .bounce { animation: bounce 1.5s infinite; }
+
+    /* Fade-in animation */
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+    .fade-in { opacity: 0; animation: fadeIn 1.5s forwards; }
+
+    /* Progress bar */
+    .progress-container {
+      width: 100%;
+      max-width: 400px;
+      height: 12px;
+      background-color: rgba(255,255,255,0.3);
+      border-radius: 8px;
+      overflow: hidden;
+      margin: 2rem auto 0;
+    }
+    .progress-bar {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(to right, #facc15, #eab308);
+      border-radius: 8px;
+      transition: width 1s linear;
     }
 
-    .cta-button:hover {
-      background-color: #003366;
-      transform: scale(1.05);
-    }
-
-    .social-icons a {
-      color: white;
-      font-size: 30px;
-      margin: 0 20px;
-      padding: 12px;
-      background-color: #333;
-      border-radius: 50%;
-      transition: transform 0.3s, color 0.3s, background-color 0.3s;
-    }
-
-    .social-icons a:hover {
-      transform: scale(1.2);
-      background-color: #ff9800;
-    }
-
-    .card, .course-card {
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
-
-    .card:hover, .course-card:hover {
-      transform: scale(1.05);
-      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
-    }
-
-    footer {
-      background-color: #e7ecef;
-      padding: 20px;
-      text-align: center;
-    }
-
-    .social-media a {
-      margin: 0 10px;
-      font-size: 24px;
-      text-decoration: none;
-    }
-
-    .fab.fa-facebook { color: #1877f2; }
-    .fab.fa-twitter { color: #1da1f2; }
-    .fab.fa-instagram { color: #e1306c; }
-    .fab.fa-linkedin { color: #0a66c2; }
-
-    .social-media a:hover {
-      opacity: 0.8;
+    /* Feature card hover */
+    .feature-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
     }
   </style>
 </head>
-  <body class="text-gray-900 bg-gray-50">    <!-- Responsive Navbar -->   
+<body class="bg-gradient-to-br from-blue-800 to-indigo-900 text-white min-h-screen flex flex-col justify-center items-center px-4">
 
- <nav class="bg-blue-800 text-white py-4 shadow-md sticky top-0 z-50">  
-    <div class="max-w-7xl mx-auto px-4 flex items-center justify-between">  
-      <a href="#" class="text-2xl font-bold">Scient E-Library</a>  
-      <button id="menu-btn" class="text-white sm:hidden text-2xl focus:outline-none">  
-        <i class="fas fa-bars"></i>  
-      </button>  
-      <div id="nav-links" class="hidden sm:flex space-x-6 text-sm sm:text-base">  
-        <a href="index.html" class="hover:text-yellow-400">Home</a>  
-        <a href="about.html" class="hover:text-yellow-400">About Us</a>  
-        <a href="register.html" class="hover:text-yellow-400">Register</a>  
-        <a href="login.html" class="hover:text-yellow-400">Login</a>  
-        <a href="contact.html" class="hover:text-yellow-400">Contact</a>  
-      </div>  
-    </div>  
-    <div id="mobile-menu" class="sm:hidden hidden px-4 pb-4 flex flex-col space-y-2 text-sm">  
-      <a href="index.html" class="hover:text-yellow-400">Home</a>  
-      <a href="about.html" class="hover:text-yellow-400">About Us</a>  
-      <a href="register.html" class="hover:text-yellow-400">Register</a>  
-      <a href="login.html" class="hover:text-yellow-400">Login</a>  
-      <a href="contact.html" class="hover:text-yellow-400">Contact</a>  
-    </div>  
-  </nav>    <!-- Hero Section -->    <header class="bg-blue-900 text-white py-12 md:py-16 px-4 text-center shadow-lg">  
-    <h1 class="text-3xl md:text-4xl font-extrabold">Scient E-Library</h1>  
-    <p class="text-base md:text-xl mt-4 max-w-3xl mx-auto">Empowering students with limitless knowledge.</p>  
-    <a href="register.html" class="cta-button mt-8 inline-block text-center">Join Now and Start Learning</a>  
-  </header>    <!-- Main Section -->    <section class="my-12 max-w-7xl mx-auto px-4">  
-    <div class="text-center">  
-      <h2 class="text-2xl md:text-3xl font-semibold text-blue-900">Welcome to Scient E-Library</h2>  
-      <p class="text-base md:text-lg mt-4 max-w-3xl mx-auto">Explore cutting-edge technology, timeless literature, and all the academic resources you need for success.</p>  
-    </div>  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-12">  
-  <div class="card p-6 bg-white rounded-lg shadow-md">  
-    <h5 class="text-lg md:text-xl font-semibold text-blue-900">Our Vision</h5>  
-    <p class="mt-4">To be the global leader in providing high-quality academic resources.</p>  
-  </div>  
-  <div class="card p-6 bg-white rounded-lg shadow-md">  
-    <h5 class="text-lg md:text-xl font-semibold text-blue-900">Our Courses</h5>  
-    <p class="mt-4">Courses across disciplines including tech, business, humanities, and arts.</p>  
-  </div>  
-  <div class="card p-6 bg-white rounded-lg shadow-md">  
-    <h5 class="text-lg md:text-xl font-semibold text-blue-900">Student Resources</h5>  
-    <p class="mt-4">Access e-books, research papers, and tutorials to enhance your academic growth.</p>  
-  </div>  
-</div>
+  <!-- Hero Section -->
+  <div class="text-center max-w-3xl">
+    <i class="fas fa-external-link-alt text-7xl mb-6 bounce"></i>
+    <h1 class="text-3xl md:text-5xl font-extrabold fade-in">Welcome to LearnWithVarunGoud!</h1>
+    <p class="mt-4 text-lg md:text-2xl fade-in">
+      Scient E-Library has now <strong>evolved into LearnWithVarunGoud</strong>, offering
+      <span class="text-yellow-400 font-semibold">enhanced resources</span> and a
+      <span class="text-yellow-400 font-semibold">better learning experience</span>.
+    </p>
+    <p class="mt-4 fade-in">Redirecting you in <span id="countdown">10</span> seconds...</p>
+    <a href="https://learnwithvarungoud1.vercel.app/"
+       class="inline-block mt-6 bg-yellow-400 text-blue-900 font-bold px-6 py-3 rounded-lg hover:bg-yellow-500 transition-all fade-in">
+       Go to New Site Now
+    </a>
 
-  </section>    <!-- Courses Section -->    <section class="py-12 bg-gray-100 px-4">  
-    <div class="text-center">  
-      <h2 class="text-2xl md:text-3xl font-semibold text-blue-900">Featured Courses</h2>  
-      <p class="text-base md:text-lg mt-4 max-w-3xl mx-auto">Courses designed for academic and professional excellence.</p>  
-    </div>  
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-12">  
-      <div class="course-card p-6 bg-white rounded-lg shadow-md">  
-        <h3 class="text-lg md:text-xl font-semibold text-blue-900">Advanced Web Development</h3>  
-        <p class="mt-4">Learn tools for modern, responsive websites and apps.</p>  
-      </div>  
-      <div class="course-card p-6 bg-white rounded-lg shadow-md">  
-        <h3 class="text-lg md:text-xl font-semibold text-blue-900">Digital Marketing</h3>  
-        <p class="mt-4">Master SEO, content creation, and social media strategy.</p>  
-      </div>  
-      <div class="course-card p-6 bg-white rounded-lg shadow-md">  
-        <h3 class="text-lg md:text-xl font-semibold text-blue-900">Data Science and AI</h3>  
-        <p class="mt-4">Explore machine learning and AI in real-world scenarios.</p>  
-      </div>  
-    </div>  
-  </section> 
-  <section class="my-16 max-w-7xl mx-auto px-4">
-  <h2 class="text-4xl font-bold text-blue-900 text-center mb-10">Website Management & Collaboration</h2>
-
-  <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-
-    <!-- Maintainer Card -->
-    <div class="bg-white rounded-lg shadow-lg p-6 text-center hover:scale-105 transition-transform">
-      <div class="flex justify-center mb-4">
-        <i class="fas fa-user-cog text-4xl text-blue-600"></i>
-      </div>
-      <h3 class="text-xl font-semibold text-blue-900 mb-2">Curated by B. Varun Goud</h3>
-      <p class="text-gray-600 text-sm">All notes, resources, and updates are carefully maintained by the site owner to ensure accuracy and reliability.</p>
+    <!-- Progress Bar -->
+    <div class="progress-container fade-in">
+      <div class="progress-bar" id="progressBar"></div>
     </div>
-
-    <!-- Student Collaboration Card -->
-    <div class="bg-white rounded-lg shadow-lg p-6 text-center hover:scale-105 transition-transform">
-      <div class="flex justify-center mb-4">
-        <i class="fas fa-users text-4xl text-blue-600"></i>
-      </div>
-      <h3 class="text-xl font-semibold text-blue-900 mb-2">Student Suggestions</h3>
-      <p class="text-gray-600 text-sm">Students can suggest new notes or resources. Every suggestion is reviewed before being published on the site.</p>
-    </div>
-
-    <!-- Quality & Updates Card -->
-    <div class="bg-white rounded-lg shadow-lg p-6 text-center hover:scale-105 transition-transform">
-      <div class="flex justify-center mb-4">
-        <i class="fas fa-check-circle text-4xl text-blue-600"></i>
-      </div>
-      <h3 class="text-xl font-semibold text-blue-900 mb-2">Verified & Updated</h3>
-      <p class="text-gray-600 text-sm">Content is verified, structured, and updated regularly to provide students with the most reliable academic resources.</p>
-    </div>
-
   </div>
-<div class="text-center mt-8">
-  <a href="./colabrequest/" class="cta-button inline-block">
-    Join as Collaborator
-  </a>
-</div>
-<div class="text-center mt-2 text-gray-500 text-sm">
-  Last Updated: <span id="lastUpdated">August 3, 2025</span>
-</div>
 
-
-  <p class="text-center text-gray-500 text-sm mt-8">
-    Connect with the maintainer: 
-    <a href="https://www.linkedin.com/in/bandi-varun-goud" target="_blank" class="text-blue-600 hover:underline">LinkedIn</a>
-  </p>
-</section>
-
-<section class="text-center mt-8 text-sm text-gray-700">
-  <p>Website developed by <strong>B. Varun Goud</strong>, student at <strong>Scient Institute of Technology, Ibrahimpatnam</strong>.</p>
-  <p>Connect on <a href="https://www.linkedin.com/in/bandi-varun-goud" target="_blank" class="text-blue-600 underline">LinkedIn</a></p>
-</section>
-   <!-- Footer -->   
-<footer class="bg-gray-900 text-white py-12 mt-16 px-4">
-  <div class="max-w-7xl mx-auto">
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-12">
-      <!-- ABOUT US -->
-      <div>
-        <h5 class="text-xl font-semibold mb-4">ABOUT US</h5>
-        <ul class="space-y-2 text-sm">
-          <li><a href="about.html" class="hover:text-yellow-400">About Scient E-Library</a></li>
-          <li><a href="vision-mission.html" class="hover:text-yellow-400">Vision & Mission</a></li>
-          <li><a href="team.html" class="hover:text-yellow-400">Our Team</a></li>
-          <li><a href="contact.html" class="hover:text-yellow-400">Contact Us</a></li>
-          <li><a href="faq.html" class="hover:text-yellow-400">FAQ</a></li>
-        </ul>
+  <!-- Features Section -->
+  <section class="mt-16 w-full max-w-5xl text-center">
+    <h2 class="text-3xl md:text-4xl font-bold mb-10 fade-in">Why LearnWithVarunGoud?</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="feature-card bg-white text-blue-900 p-6 rounded-lg shadow-lg fade-in transition-transform">
+        <i class="fas fa-book-open text-4xl mb-4 text-yellow-400"></i>
+        <h3 class="font-semibold text-xl mb-2">Vast Resources</h3>
+        <p>Access notes, tutorials, and papers curated for your academic success.</p>
       </div>
-
-      <!-- COURSES & RESOURCES -->
-      <div>
-        <h5 class="text-xl font-semibold mb-4">COURSES & RESOURCES</h5>
-        <ul class="space-y-2 text-sm">
-          <li><a href="#" onclick="showAlertAndRedirect()" class="hover:text-yellow-400">Browse Courses</a></li>
-          <li><a href="#" onclick="showAlertAndRedirect()" class="hover:text-yellow-400">E-Books Library</a></li>
-          <li><a href="#" onclick="showAlertAndRedirect()" class="hover:text-yellow-400">Tutorials</a></li>
-          <li><a href="#" onclick="showAlertAndRedirect()" class="hover:text-yellow-400">Research Papers</a></li>
-          <li><a href="#" onclick="showAlertAndRedirect()" class="hover:text-yellow-400">Webinars</a></li>
-        </ul>
+      <div class="feature-card bg-white text-blue-900 p-6 rounded-lg shadow-lg fade-in transition-transform">
+        <i class="fas fa-graduation-cap text-4xl mb-4 text-yellow-400"></i>
+        <h3 class="font-semibold text-xl mb-2">Expert Guidance</h3>
+        <p>Structured content maintained by experienced educators and students.</p>
       </div>
-
-      <!-- QUICK LINKS -->
-      <div>
-        <h5 class="text-xl font-semibold mb-4">QUICK LINKS</h5>
-        <ul class="space-y-2 text-sm">
-          <li><a href="register.html" class="hover:text-yellow-400">Register</a></li>
-          <li><a href="login.html" class="hover:text-yellow-400">Login</a></li>
-          <li><a href="terms.html" class="hover:text-yellow-400">Terms of Use</a></li>
-          <li><a href="privacy.html" class="hover:text-yellow-400">Privacy Policy</a></li>
-          <li><a href="contact.html" class="hover:text-yellow-400">Contact Us</a></li>
-        </ul>
-      </div>
-
-      <!-- SOCIAL MEDIA -->
-      <div>
-        <h5 class="text-xl font-semibold mb-4">FOLLOW US ON</h5>
-        <div class="social-media flex flex-wrap gap-4 mt-4">
-          <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a>
-          <a href="https://www.twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
-          <a href="https://www.instagram.com/varungoud___21/" target="_blank"><i class="fab fa-instagram"></i></a>
-          <a href="https://www.linkedin.com/in/bandi-varun-goud" target="_blank"><i class="fab fa-linkedin"></i></a>
-        </div>
+      <div class="feature-card bg-white text-blue-900 p-6 rounded-lg shadow-lg fade-in transition-transform">
+        <i class="fas fa-rocket text-4xl mb-4 text-yellow-400"></i>
+        <h3 class="font-semibold text-xl mb-2">Fast Learning</h3>
+        <p>Interactive resources and tutorials to help you learn efficiently.</p>
       </div>
     </div>
+  </section>
 
-    <!-- CREDIT -->
-    <div class="text-center mt-12 border-t border-gray-700 pt-6 text-sm">
-      <p>
-        © 2025 Scient E-Library. All rights reserved. <br />
-        
-      <p class="text-sm text-gray-500 mt-6 text-center">
-  Developed with ❤️ by <a href="https://www.linkedin.com/in/bandi-varun-goud" target="_blank" class="text-blue-500 hover:underline">B. Varun Goud</a>, CSE student at Scient Institute of Technology, Ibrahimpatnam.
-</p>
-
-        
- </div>
+  <!-- Footer CTA -->
+  <div class="mt-16 text-center fade-in">
+    <p class="mb-4">Ready to start your enhanced learning journey?</p>
+    <a href="https://learnwithvarungoud1.vercel.app/"
+       class="inline-block bg-yellow-400 text-blue-900 font-bold px-8 py-3 rounded-lg hover:bg-yellow-500 transition-all">
+       Visit LearnWithVarunGoud Now
+    </a>
   </div>
-</footer>
-    <!-- Scripts -->    <script>  
-    function showAlertAndRedirect() {  
-      alert("Kindly Register & Access the content with login details. No content is shared without login details.");  
-      window.location.href = "index.html";  
-    }  
-  
-    // Disable developer tools and context menu  
-    document.addEventListener('contextmenu', event => event.preventDefault());  
-    document.addEventListener('dblclick', event => event.preventDefault());  
-    document.addEventListener('keydown', function (event) {  
-      if (event.key === 'F12' || (event.ctrlKey && event.shiftKey && event.key === 'I') || (event.ctrlKey && event.key === 'U')) {  
-        event.preventDefault();  
-      }  
-    });  
-  
-    // Mobile menu toggle  
-    const menuBtn = document.getElementById('menu-btn');  
-    const mobileMenu = document.getElementById('mobile-menu');  
-    menuBtn.addEventListener('click', () => {  
-      mobileMenu.classList.toggle('hidden');  
-    });  
-  </script>  </body>  
-</html>  
+
+  <!-- Scripts -->
+  <script>
+    const countdownEl = document.getElementById('countdown');
+    const progressBar = document.getElementById('progressBar');
+    let countdown = 10;
+    const newSite = "https://learnwithvarungoud1.vercel.app/";
+
+    const timer = setInterval(() => {
+      countdown--;
+      countdownEl.textContent = countdown;
+      progressBar.style.width = `${(10 - countdown) * 20}%`;
+      if (countdown <= 0) {
+        clearInterval(timer);
+        window.location.href = newSite;
+      }
+    }, 1000);
+
+    // Stagger fade-in
+    const fadeEls = document.querySelectorAll('.fade-in');
+    fadeEls.forEach((el, i) => {
+      el.style.animationDelay = `${i * 0.3}s`;
+    });
+  </script>
+</body>
+</html>
