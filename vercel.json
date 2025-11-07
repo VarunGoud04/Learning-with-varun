@@ -62,8 +62,8 @@
   ],
   "redirects": [
     {
-      "source": "/(.*)",
-      "destination": "../public/suspended.html",
+      "source": "/((?!suspended\\.html).*)",
+      "destination": "/suspended.html",
       "permanent": false
     }
   ]
