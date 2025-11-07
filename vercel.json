@@ -60,10 +60,11 @@
       ]
     }
   ],
-  "rewrites": [
+  "redirects": [
     {
-      "source": "/(.*)",
-      "destination": "/suspended.html"
+      "source": "/((?!suspended\\.html).*)",
+      "destination": "/suspended.html",
+      "permanent": false
     }
   ]
 }
