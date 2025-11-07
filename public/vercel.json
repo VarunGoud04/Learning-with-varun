@@ -63,7 +63,7 @@
   "redirects": [
     {
       "source": "/(.*)",
-      "destination": "./suspend.html",
+      "destination": "./suspended.html",
       "permanent": false
     }
   ]
