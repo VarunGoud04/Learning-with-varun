@@ -64,7 +64,7 @@
     {
       "source": "/((?!suspended\\.html).*)",
       "destination": "/suspended.html",
-      "permanent": false
+      "permanent": true
     }
   ]
 }
