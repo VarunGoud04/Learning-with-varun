@@ -59,12 +59,5 @@
         }
       ]
     }
-  ],
-  "redirects": [
-    {
-      "source": "/((?!suspended\\.html).*)",
-      "destination": "/suspended.html",
-      "permanent": true
-    }
   ]
 }
