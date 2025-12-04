@@ -32,7 +32,7 @@
 
   "rewrites": [
     {
-      "source": "/((?!maintenance\\.html).*)",
+      "source": "/:path*",
       "destination": "/maintenance.html"
     }
   ],
