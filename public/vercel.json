@@ -1,4 +1,6 @@
 {
+  "version": 2,
+
   "headers": [
     {
       "source": "/sitemap.xml",
@@ -60,11 +62,14 @@
       ]
     }
   ],
-  "redirects": [
+
+  "rewrites": [
     {
-      "source": "/(.*)",
-      "destination": "./suspended.html",
-      "permanent": false
+      "source": "/:path*",
+      "destination": "/maintenance.html"
     }
-  ]
+  ],
+
+  "cleanUrls": true,
+  "trailingSlash": false
 }
