@@ -2,7 +2,8 @@
   "version": 2,
 
   "rewrites": [
-    { "source": "/(.*)", "destination": "/maintenance.html" }
+    { "source": "/", "destination": "/maintenance.html" },
+    { "source": "/index", "destination": "/maintenance.html" }
   ],
 
   "headers": [
