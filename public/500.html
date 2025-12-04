@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>500 — Server Error | Scient E-Library</title>
+
+<style>
+:root{
+  --accent:#ef6b61;
+  --bg1:#0c0d10;
+  --bg2:#0b0c0e;
+  --card:#15171c;
+  --text:#e9eef6;
+}
+
+body{
+  margin:0; height:100vh; display:flex; align-items:center; justify-content:center;
+  background:linear-gradient(145deg,var(--bg1),var(--bg2));
+  background-size:200% 200%; animation:grad 12s ease-in-out infinite;
+  color:var(--text); font-family:Inter,system-ui; overflow:hidden;
+}
+@keyframes grad{0%{background-position:0 50%}50%{background-position:100% 50%}100%{background-position:0 50%}}
+
+.card{
+  background:var(--card); padding:32px; width:420px; max-width:92vw;
+  border-radius:16px; box-shadow:0 10px 30px #000a; text-align:center;
+  animation:fade .8s ease-out both;
+}
+@keyframes fade{from{opacity:0; transform:translateY(16px)} to{opacity:1; transform:translateY(0)}}
+
+h1{font-size:32px; color:var(--accent); margin-bottom:10px;}
+p{opacity:.85}
+
+footer{margin-top:20px; font-size:13px; color:#999;}
+footer a{color:var(--accent); font-weight:600; text-decoration:none;}
+footer a:hover{opacity:.7}
+</style>
+</head>
+
+<body>
+<div class="card">
+  <h1>500</h1>
+  <p>Our server encountered an unexpected error.</p>
+  <p>Please try again later.</p>
+
+  <footer>
+    Developed by <strong>B. Varun Goud</strong><br>
+    <a href="https://www.linkedin.com/in/bandi-varun-goud" target="_blank">LinkedIn</a> |
+    <a href="https://instagram.com/varungoud___21" target="_blank">Instagram</a>
+  </footer>
+</div>
+</body>
+</html>
