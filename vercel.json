@@ -1,11 +1,6 @@
 {
   "version": 2,
 
-  "rewrites": [
-    { "source": "/", "destination": "/maintenance.html" },
-    { "source": "/index", "destination": "/maintenance.html" }
-  ],
-
   "headers": [
     {
       "source": "/sitemap.xml",
@@ -32,6 +27,13 @@
         { "key": "Referrer-Policy", "value": "no-referrer-when-downgrade" },
         { "key": "Permissions-Policy", "value": "geolocation=(), microphone=(), camera=()" }
       ]
+    }
+  ],
+
+  "rewrites": [
+    {
+      "source": "/((?!maintenance\\.html).*)",
+      "destination": "/maintenance.html"
     }
   ],
 
