@@ -178,25 +178,6 @@ enhanced stability, and improved academic content delivery.</p>
 
 </section>
 
-<script>
-function updateDaysLeft() {
-  const target = new Date("2026-01-01").getTime();
-  const now = Date.now();
-  const diff = target - now;
-
-  // Whole days remaining (auto-updates exactly at midnight)
-  const days = Math.ceil(diff / 86400000);
-
-  document.getElementById("days").textContent =
-    days + " days remaining";
-}
-
-// Run immediately
-updateDaysLeft();
-
-// Update every second (safe + real-time)
-setInterval(updateDaysLeft, 1000);
-</script>
 
 
 </body>
