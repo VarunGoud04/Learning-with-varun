@@ -1,32 +1,17 @@
 {
+  "cleanUrls": true,
+  "trailingSlash": false,
+
   "headers": [
-    {
-      "source": "/sitemap.xml",
-      "headers": [
-        { "key": "Content-Type", "value": "application/xml; charset=utf-8" }
-      ]
-    },
-    {
-      "source": "/",
-      "headers": [
-        { "key": "X-Developer", "value": "B. Varun Goud" },
-        { "key": "X-Developer-LinkedIn", "value": "https://www.linkedin.com/in/bandi-varun-goud" },
-        { "key": "X-Powered-By", "value": "VarunGoud.Dev" },
-        { "key": "X-Sitemap", "value": "https://scient-e-library.vercel.app/sitemap.xml" }
-      ]
-    },
     {
       "source": "/(.*)",
       "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" },
-        { "key": "Strict-Transport-Security", "value": "max-age=63072000; includeSubDomains; preload" },
-        { "key": "X-Content-Type-Options", "value": "nosniff" },
-        { "key": "X-Frame-Options", "value": "DENY" },
-        { "key": "Referrer-Policy", "value": "no-referrer-when-downgrade" },
-        { "key": "Permissions-Policy", "value": "geolocation=(), microphone=(), camera=()" }
+        { "key": "Cache-Control", "value": "no-cache" },
+        { "key": "X-Powered-By", "value": "Shutdown-Mode" }
       ]
     }
   ],
+
   "rewrites": [
     {
       "source": "/(.*)",
