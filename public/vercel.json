@@ -2,20 +2,11 @@
   "cleanUrls": true,
   "trailingSlash": false,
 
-  "headers": [
+  "redirects": [
     {
       "source": "/(.*)",
-      "headers": [
-        { "key": "Cache-Control", "value": "no-cache" },
-        { "key": "X-Powered-By", "value": "Shutdown-Mode" }
-      ]
-    }
-  ],
-
-  "rewrites": [
-    {
-      "source": "/(.*)",
-      "destination": "/shutdown.html"
+      "destination": "/shutdown.html",
+      "permanent": false
     }
   ]
 }
