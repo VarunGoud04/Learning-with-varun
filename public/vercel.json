@@ -14,9 +14,9 @@
 
   "redirects": [
     {
-      "source": "/((?!shutdown\\.html).*)",
+      "source": "/((?!shutdown\\.html$).*)",
       "destination": "/shutdown.html",
-      "permanent": true
+      "permanent": false
     }
   ]
 }
