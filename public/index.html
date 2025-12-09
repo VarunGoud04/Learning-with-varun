@@ -1,27 +1,158 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Scient E-Library | Service Discontinued</title>
+  <link rel="icon" href="data:image/svg+xml,
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'>
+  <text y='70' font-size='80'>📚</text>
+</svg>" />
+
   <style>
-    body { 
-      font-family: Arial, sans-serif; 
-      text-align: center; 
-      margin-top: 10%; 
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: linear-gradient(135deg, #1e293b, #334155, #475569);
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      animation: fadeIn 1.2s ease;
+      background-size: 300% 300%;
+      animation: gradientShift 12s ease infinite;
     }
+
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .container {
+      max-width: 450px;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(12px);
+      padding: 35px;
+      border-radius: 20px;
+      text-align: center;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.25);
+      animation: fadeIn 1.4s ease;
+    }
+
     h1 {
-      font-size: 28px;
-      font-weight: bold;
+      font-size: 26px;
+      font-weight: 700;
+      margin-bottom: 15px;
     }
+
     p {
-      font-size: 16px;
-      margin-top: 10px;
-      color: #555;
+      font-size: 15px;
+      line-height: 1.6;
+      color: #e2e8f0;
+    }
+
+    /* Error Icon */
+    .icon {
+      font-size: 48px;
+      margin-bottom: 12px;
+    }
+
+    /* Progress Bar */
+    .progress {
+      width: 100%;
+      height: 6px;
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 4px;
+      overflow: hidden;
+      margin: 18px 0 10px;
+    }
+
+    .progress i {
+      display: block;
+      width: 40%;
+      height: 100%;
+      background: #38bdf8;
+      animation: load 1.6s infinite;
+    }
+
+    @keyframes load {
+      0% { transform: translateX(-100%); }
+      50% { transform: translateX(50%); }
+      100% { transform: translateX(150%); }
+    }
+
+    footer {
+      margin-top: 18px;
+      font-size: 14px;
+      opacity: 0.85;
+      line-height: 1.5;
+    }
+
+    footer a {
+      color: #38bdf8;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
+
 <body>
-  <h1>Scient E-Library Services Are Now Shut Down</h1>
-  <p>The platform is no longer operational. Thank you for your support.</p>
-  <p>We appreciate your understanding and look forward to bringing you new features. Stay tuned for updates!</p>
+  <div class="container">
+
+    <div class="icon">🚫</div>
+
+    <h1>Scient E-Library Has Been Discontinued</h1>
+
+    <p>
+      The page or service you requested is no longer available because the
+      Scient E-Library platform has been permanently shut down.
+    </p>
+
+    <p style="opacity: .85;">
+      Error Code: <strong>404_RESOURCE_UNAVAILABLE</strong>
+    </p>
+
+    <div class="progress"><i></i></div>
+
+    <footer>
+      <strong>Maintained by B. Varun Goud</strong><br>
+      <a href="https://www.linkedin.com/in/bandi-varun-goud" target="_blank">LinkedIn</a> |
+      <a href="https://instagram.com/varungoud___21" target="_blank">Instagram</a>
+    </footer>
+
+  </div>
+   <script>  
+    function showAlertAndRedirect() {  
+      alert("Kindly Register & Access the content with login details. No content is shared without login details.");  
+      window.location.href = "index.html";  
+    }  
+  
+    // Disable developer tools and context menu  
+    document.addEventListener('contextmenu', event => event.preventDefault());  
+    document.addEventListener('dblclick', event => event.preventDefault());  
+    document.addEventListener('keydown', function (event) {  
+      if (event.key === 'F12' || (event.ctrlKey && event.shiftKey && event.key === 'I') || (event.ctrlKey && event.key === 'U')) {  
+        event.preventDefault();  
+      }  
+    });  
+  
+    // Mobile menu toggle  
+    const menuBtn = document.getElementById('menu-btn');  
+    const mobileMenu = document.getElementById('mobile-menu');  
+    menuBtn.addEventListener('click', () => {  
+      mobileMenu.classList.toggle('hidden');  
+    });  
+  </script>
 </body>
 </html>
