@@ -67,7 +67,17 @@
 
   "redirects": [
     {
-      "source": "/((?!shutdown\\.html$).*)",
+      "source": "/shutdown.html",
+      "destination": "/shutdown.html",
+      "permanent": false
+    },
+    {
+      "source": "/sitemap.xml",
+      "destination": "/sitemap.xml",
+      "permanent": false
+    },
+    {
+      "source": "/:path*",
       "destination": "/shutdown.html",
       "permanent": false
     }
