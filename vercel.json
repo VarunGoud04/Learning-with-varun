@@ -61,11 +61,26 @@
     }
   ],
 
-  "redirects": [
-    {
-      "source": "/((?!shutdown\\.html$|sitemap\\.xml$).*)",
-      "destination": "/shutdown.html",
-      "permanent": false
-    }
-  ]
+"redirects": [
+  {
+    "source": "/shutdown",
+    "destination": "/shutdown.html",
+    "permanent": false
+  },
+  {
+    "source": "/shutdown/",
+    "destination": "/shutdown.html",
+    "permanent": false
+  },
+  {
+    "source": "/shutdown.html",
+    "destination": "/shutdown.html",
+    "permanent": false
+  },
+  {
+    "source": "/((?!shutdown$|shutdown/$|shutdown\\.html$|sitemap\\.xml$).*)",
+    "destination": "/shutdown.html",
+    "permanent": false
+  }
+]
 }
