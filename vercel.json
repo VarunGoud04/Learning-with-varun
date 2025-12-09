@@ -5,18 +5,8 @@
 
   "redirects": [
     {
-      "source": "/shutdown",
-      "destination": "/shutdown.html",
-      "permanent": false
-    },
-    {
-      "source": "/shutdown/",
-      "destination": "/shutdown.html",
-      "permanent": false
-    },
-    {
       "source": "/:path*",
-      "destination": "/shutdown.html",
+      "destination": "/",
       "permanent": false
     }
   ]
