@@ -3,10 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Scient E-Library | Service Discontinued</title>
+  <title>Scient E-Library | Rebranding Notice</title>
+
   <link rel="icon" href="data:image/svg+xml,
 <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'>
-  <text y='70' font-size='80'>📚</text>
+  <text y='70' font-size='80'>🚀</text>
 </svg>" />
 
   <style>
@@ -20,7 +21,6 @@
       align-items: center;
       justify-content: center;
       color: #fff;
-      animation: fadeIn 1.2s ease;
       background-size: 300% 300%;
       animation: gradientShift 12s ease infinite;
     }
@@ -31,20 +31,20 @@
       100% { background-position: 0% 50%; }
     }
 
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(10px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
     .container {
-      max-width: 450px;
+      max-width: 460px;
       background: rgba(255, 255, 255, 0.1);
       backdrop-filter: blur(12px);
       padding: 35px;
       border-radius: 20px;
       text-align: center;
       box-shadow: 0 8px 30px rgba(0,0,0,0.25);
-      animation: fadeIn 1.4s ease;
+      animation: fadeIn 1.2s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     h1 {
@@ -59,13 +59,11 @@
       color: #e2e8f0;
     }
 
-    /* Error Icon */
     .icon {
       font-size: 48px;
       margin-bottom: 12px;
     }
 
-    /* Progress Bar */
     .progress {
       width: 100%;
       height: 6px;
@@ -110,49 +108,35 @@
 <body>
   <div class="container">
 
-    <div class="icon">🚫</div>
+    <div class="icon">🔄</div>
 
-    <h1>Scient E-Library Has Been Discontinued</h1>
+    <h1>Scient E-Library Is Rebranding</h1>
 
     <p>
-      The page or service you requested is no longer available because the
-      Scient E-Library platform has been permanently shut down.
+      Scient E-Library is evolving into a new personal full-stack initiative by
+      its original developer. As part of this transition, the platform is being
+      rebranded and restructured under a new identity.
     </p>
 
-    <p style="opacity: .85;">
-      Error Code: <strong>404_RESOURCE_UNAVAILABLE</strong>
+    <p>
+      The upcoming project will focus on building scalable, modern web
+      applications and end-to-end system design as part of a personal
+      engineering portfolio.
+    </p>
+
+    <p style="opacity: 0.85;">
+      This site is currently under transition. Updates will be available soon.
     </p>
 
     <div class="progress"><i></i></div>
 
     <footer>
-      <strong>Maintained by B. Varun Goud</strong><br>
+      <strong>Previously developed as Scient E-Library</strong><br>
+      Rebranding to <strong>Varun’s Project</strong><br><br>
       <a href="https://www.linkedin.com/in/bandi-varun-goud" target="_blank">LinkedIn</a> |
-      <a href="https://instagram.com/varungoud___21" target="_blank">Instagram</a>
+      <a href="https://github.com/VarunGoud04" target="_blank">GitHub</a>
     </footer>
 
   </div>
-   <script>  
-    function showAlertAndRedirect() {  
-      alert("Kindly Register & Access the content with login details. No content is shared without login details.");  
-      window.location.href = "index.html";  
-    }  
-  
-    // Disable developer tools and context menu  
-    document.addEventListener('contextmenu', event => event.preventDefault());  
-    document.addEventListener('dblclick', event => event.preventDefault());  
-    document.addEventListener('keydown', function (event) {  
-      if (event.key === 'F12' || (event.ctrlKey && event.shiftKey && event.key === 'I') || (event.ctrlKey && event.key === 'U')) {  
-        event.preventDefault();  
-      }  
-    });  
-  
-    // Mobile menu toggle  
-    const menuBtn = document.getElementById('menu-btn');  
-    const mobileMenu = document.getElementById('mobile-menu');  
-    menuBtn.addEventListener('click', () => {  
-      mobileMenu.classList.toggle('hidden');  
-    });  
-  </script>
 </body>
 </html>
