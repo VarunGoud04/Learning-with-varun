@@ -56,83 +56,289 @@
   <!--
   <meta http-equiv="refresh" content="8;url=https://NEW-WEBSITE-LINK-HERE" />
   -->
+
+  <style>
+    /* Premium floating gradient background */
+    @keyframes blob {
+      0%, 100% {
+        transform: translate(0, 0) scale(1);
+      }
+      33% {
+        transform: translate(40px, -30px) scale(1.05);
+      }
+      66% {
+        transform: translate(-30px, 20px) scale(0.98);
+      }
+    }
+
+    /* Soft fade + slide */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(18px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Slight floating for hero elements */
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0px);
+      }
+      50% {
+        transform: translateY(-8px);
+      }
+    }
+
+    /* Border glow loop */
+    @keyframes glow {
+      0%, 100% {
+        box-shadow: 0 0 20px rgba(59, 130, 246, 0.4),
+                    0 0 40px rgba(129, 140, 248, 0.35);
+      }
+      50% {
+        box-shadow: 0 0 26px rgba(59, 130, 246, 0.7),
+                    0 0 52px rgba(129, 140, 248, 0.55);
+      }
+    }
+
+    /* Underline sweep on brand */
+    @keyframes underlineSweep {
+      0% {
+        width: 0%;
+        opacity: 0;
+      }
+      40% {
+        width: 60%;
+        opacity: 1;
+      }
+      100% {
+        width: 100%;
+        opacity: 1;
+      }
+    }
+
+    /* Shimmer for email/WhatsApp buttons */
+    @keyframes shimmer {
+      0% {
+        transform: translateX(-100%);
+      }
+      100% {
+        transform: translateX(100%);
+      }
+    }
+
+    /* Slow spin for orbit ring */
+    @keyframes spinSlow {
+      from {
+        transform: translate(-50%, 0) rotate(0deg);
+      }
+      to {
+        transform: translate(-50%, 0) rotate(360deg);
+      }
+    }
+
+    /* Sliding status text (4 lines) */
+    @keyframes statusSlide4 {
+      0%, 20% {
+        transform: translateY(0%);
+      }
+      25%, 45% {
+        transform: translateY(-25%);
+      }
+      50%, 70% {
+        transform: translateY(-50%);
+      }
+      75%, 95% {
+        transform: translateY(-75%);
+      }
+      100% {
+        transform: translateY(-100%);
+      }
+    }
+  </style>
 </head>
 
-<body class="bg-gray-50 text-gray-900">
+<body class="bg-slate-950 text-gray-50 relative overflow-x-hidden">
+
+<!-- GLOBAL BACKGROUND EFFECTS -->
+<div class="pointer-events-none fixed inset-0 -z-10">
+  <div class="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(56,189,248,0.14),_transparent_55%),_radial-gradient(circle_at_bottom,_rgba(129,140,248,0.12),_transparent_55%)]"></div>
+
+  <div class="absolute -top-32 -left-16 h-72 w-72 rounded-full bg-blue-600/40 blur-3xl opacity-80 animate-[blob_24s_ease-in-out_infinite]"></div>
+  <div class="absolute top-40 -right-20 h-80 w-80 rounded-full bg-indigo-500/40 blur-3xl opacity-80 animate-[blob_26s_ease-in-out_infinite]"></div>
+  <div class="absolute bottom-0 left-10 h-64 w-64 rounded-full bg-sky-500/35 blur-3xl opacity-70 animate-[blob_30s_ease-in-out_infinite]"></div>
+</div>
 
 <!-- NAVBAR -->
-<nav class="bg-blue-800 text-white py-4 shadow-md">
-  <div class="max-w-7xl mx-auto px-4 text-center">
-    <span class="text-2xl font-bold">Learning with Varun</span>
+<nav class="bg-slate-950/70 backdrop-blur-xl text-white py-4 shadow-lg shadow-blue-500/20 sticky top-0 z-30 border-b border-slate-800/60">
+  <div class="max-w-7xl mx-auto px-4 flex items-center justify-center relative">
+    <div class="inline-flex flex-col items-center">
+      <span class="text-2xl font-bold tracking-[0.18em] uppercase">
+        Learning with Varun
+      </span>
+      <span class="mt-1 h-[2px] bg-gradient-to-r from-sky-400 via-blue-500 to-indigo-500 rounded-full animate-[underlineSweep_1.4s_ease-out_0.2s_forwards] w-0"></span>
+    </div>
+
+    <div class="absolute right-6 hidden md:block">
+      <div class="h-7 w-7 rounded-full bg-gradient-to-tr from-sky-400 to-indigo-400 opacity-70 animate-[float_4.5s_ease-in-out_infinite]"></div>
+    </div>
   </div>
 </nav>
 
 <!-- HERO -->
-<header class="bg-blue-900 text-white py-20 text-center">
-  <h1 class="text-4xl font-extrabold">Platform Update</h1>
-  <p class="mt-6 text-lg max-w-3xl mx-auto">
-    This website has been <strong>rebranded and restructured</strong>.
-    A new link and updated experience will be available soon.
-  </p>
+<header class="relative text-white py-20 md:py-24 overflow-hidden">
+  <!-- Decorative orbiting ring -->
+  <div class="pointer-events-none absolute -top-32 left-1/2 h-72 w-72 rounded-full border border-sky-400/20 blur-sm animate-[spinSlow_32s_linear_infinite]"></div>
+
+  <div class="max-w-5xl mx-auto px-4 relative">
+    <div class="text-center">
+      <p class="uppercase tracking-[0.3em] text-xs md:text-sm text-sky-300/80 opacity-0 animate-[fadeInUp_0.7s_ease-out_forwards]">
+        A product of VarunTechServices
+      </p>
+
+      <h1 class="mt-6 text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight opacity-0 animate-[fadeInUp_0.9s_ease-out_forwards] [animation-delay:0.15s]">
+        Platform <span class="text-sky-400">Update</span> &
+        <span class="bg-clip-text text-transparent bg-gradient-to-r from-sky-400 via-blue-400 to-indigo-400">
+          Next Chapter
+        </span>
+      </h1>
+
+      <p class="mt-6 text-lg md:text-xl max-w-3xl mx-auto text-slate-200/90 opacity-0 animate-[fadeInUp_0.9s_ease-out_forwards] [animation-delay:0.3s]">
+        This website has been <strong>rebranded and restructured</strong>.
+        A new link and elevated learning experience will be available soon.
+      </p>
+
+      <!-- Floating, changing STATUS pill -->
+      <div class="mt-8 flex justify-center">
+        <div class="relative inline-flex items-center gap-2 px-4 py-2 rounded-full border border-sky-400/40 bg-slate-900/70 backdrop-blur-sm text-xs md:text-sm shadow-md shadow-sky-500/20 animate-[float_5.5s_ease-in-out_infinite] overflow-hidden">
+          <!-- dot -->
+          <span class="relative flex h-2.5 w-2.5">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-70"></span>
+            <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-400"></span>
+          </span>
+
+          <!-- sliding text container -->
+          <div class="h-5 md:h-6 overflow-hidden">
+            <div class="flex flex-col animate-[statusSlide4_12s_ease-in-out_infinite]">
+              <span class="text-slate-100">Status: Transition in progress</span>
+              <span class="text-slate-100">Status: Crafting a better learning flow</span>
+              <span class="text-slate-100">Status: Designing a premium UI/UX</span>
+              <span class="text-slate-100">Status: Preparing the launch experience</span>
+              <!-- duplicate first for smooth loop feel if desired -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </header>
 
 <!-- TRANSITION NOTICE -->
-<section class="max-w-4xl mx-auto px-4 py-16 text-center">
-  <h2 class="text-3xl font-semibold text-blue-900">
-    Important Notice for Visitors
-  </h2>
+<section class="max-w-4xl mx-auto px-4 pb-20 pt-4 text-center relative">
+  <div class="relative">
+    <div class="absolute inset-0 rounded-3xl bg-gradient-to-r from-sky-500/10 via-blue-500/5 to-indigo-500/10 blur-xl opacity-80"></div>
 
-  <p class="mt-6 text-gray-700 leading-relaxed">
-    <strong>Scient E-Library</strong> has transitioned into
-    <strong>Learning with Varun</strong>, a developer-led educational platform
-    built under <strong>VarunTechServices</strong>.
-  </p>
+    <div class="relative rounded-3xl bg-slate-900/80 border border-sky-500/30 shadow-2xl shadow-sky-900/60 overflow-hidden animate-[glow_3.6s_ease-in-out_infinite]">
+      <div class="h-1 w-full bg-gradient-to-r from-sky-400 via-blue-500 to-indigo-400 animate-[float_8s_ease-in-out_infinite]"></div>
 
-  <p class="mt-4 text-gray-700 leading-relaxed">
-    The previous version of the site has been archived.
-    A <strong>new website link</strong> will be published soon with improved
-    structure and features.
-  </p>
+      <div class="px-6 md:px-10 py-10 md:py-12">
+        <h2 class="text-3xl md:text-4xl font-semibold text-sky-50 opacity-0 animate-[fadeInUp_0.9s_ease-out_forwards] [animation-delay:0.15s]">
+          Important Notice for Visitors
+        </h2>
 
-  <!-- UPDATE OPTIONS -->
-  <div class="mt-10 flex flex-col sm:flex-row justify-center gap-4">
-    <a href="mailto:varuntechworks04@gmail.com?subject=Learning%20with%20Varun%20Updates"
-       class="px-6 py-3 bg-blue-700 text-white rounded-lg hover:bg-blue-800 transition">
-      Get Updates via Email
-    </a>
+        <p class="mt-6 text-slate-200/90 leading-relaxed opacity-0 animate-[fadeInUp_0.9s_ease-out_forwards] [animation-delay:0.3s]">
+          <strong>Scient E-Library</strong> has transitioned into
+          <strong>Learning with Varun</strong>, a developer-led educational platform
+          built under <strong>VarunTechServices</strong>.
+        </p>
 
-    <a href="https://wa.me/919014075885?text=Please%20notify%20me%20when%20Learning%20with%20Varun%20is%20live"
-       target="_blank"
-       class="px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition">
-      Get Updates on WhatsApp
-    </a>
+        <p class="mt-4 text-slate-200/90 leading-relaxed opacity-0 animate-[fadeInUp_0.9s_ease-out_forwards] [animation-delay:0.45s]">
+          The previous version of the site has been archived.
+          A <strong>new website link</strong> will be published soon with improved
+          structure, design polish, and advanced features.
+        </p>
+
+      <!-- UPDATE OPTIONS (DEMO MODE) -->
+<div class="mt-10 flex flex-col sm:flex-row justify-center gap-4 opacity-0 animate-[fadeInUp_0.9s_ease-out_forwards] [animation-delay:0.6s]">
+
+  <!-- Email button (DEMO) -->
+  <a
+    href="#"
+    onclick="demoNotify(event)"
+    class="relative group px-7 py-3 rounded-xl bg-gradient-to-r from-sky-500 via-blue-500 to-indigo-500 text-white font-medium shadow-xl shadow-sky-900/60
+           hover:shadow-sky-700/70 transition-all duration-300 ease-out
+           hover:-translate-y-1 hover:scale-[1.02] flex items-center justify-center gap-2 overflow-hidden"
+  >
+    <span class="pointer-events-none absolute inset-0 bg-gradient-to-r from-transparent via-white/50 to-transparent translate-x-[-100%] group-hover:animate-[shimmer_1.5s_linear]"></span>
+    <span class="relative inline-flex h-2 w-2 rounded-full bg-emerald-300 animate-pulse"></span>
+    <span class="relative">Get Updates via Email</span>
+  </a>
+
+  <!-- WhatsApp button (DEMO) -->
+  <a
+    href="#"
+    onclick="demoNotify(event)"
+    class="relative group px-7 py-3 rounded-xl bg-emerald-500/90 text-white font-medium shadow-xl shadow-emerald-900/60
+           hover:bg-emerald-400 hover:shadow-emerald-700/70 transition-all duration-300 ease-out
+           hover:-translate-y-1 hover:scale-[1.02] flex items-center justify-center gap-2 overflow-hidden"
+  >
+    <span class="pointer-events-none absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent translate-x-[-100%] group-hover:animate-[shimmer_1.2s_linear]"></span>
+    <span class="relative inline-flex h-2.5 w-2.5 rounded-full bg-white animate-bounce"></span>
+    <span class="relative">Get Updates on WhatsApp</span>
+  </a>
+
+</div>
+
+
+        <p class="mt-6 text-xs md:text-sm text-slate-400 opacity-0 animate-[fadeInUp_0.9s_ease-out_forwards] [animation-delay:0.75s]">
+          No spam. Only launch and important updates.
+        </p>
+      </div>
+    </div>
   </div>
-
-  <p class="mt-6 text-sm text-gray-500">
-    No spam. Only launch and important updates.
-  </p>
 </section>
 
 <!-- FOOTER -->
-<footer class="bg-gray-900 text-white py-10 text-center">
-  <p class="text-sm">
-    <strong>Learning with Varun</strong> — A product of
-    <strong>VarunTechServices</strong>
-  </p>
+<footer class="bg-slate-950 text-white py-10 text-center border-t border-slate-800/70 relative overflow-hidden">
+  <div class="absolute top-0 left-0 h-px w-full bg-gradient-to-r from-transparent via-sky-400/80 to-transparent animate-[float_12s_ease-in-out_infinite]"></div>
 
-  <p class="text-xs text-gray-400 mt-2">
-    VarunTechServices is an independent engineering brand by B. Varun Goud.
-  </p>
+  <div class="max-w-3xl mx-auto px-4 opacity-0 animate-[fadeInUp_0.9s_ease-out_forwards] [animation-delay:0.3s]">
+    <p class="text-sm">
+      <strong>Learning with Varun</strong> — A product of
+      <strong>VarunTechServices</strong>
+    </p>
 
-  <p class="mt-4 text-sm">
-    Follow updates on
-    <a href="https://www.linkedin.com/in/bandi-varun-goud"
-       target="_blank"
-       class="text-blue-400 hover:underline">
-      LinkedIn
-    </a>
-  </p>
+    <p class="text-xs text-slate-400 mt-2">
+      VarunTechServices is an independent engineering brand by B. Varun Goud.
+    </p>
+
+    <p class="mt-4 text-sm">
+      Follow updates on
+      <a
+        href="https://www.linkedin.com/in/bandi-varun-goud"
+        target="_blank"
+        class="text-sky-400 hover:text-sky-300 hover:underline transition-colors duration-200"
+      >
+        LinkedIn
+      </a>
+    </p>
+  </div>
 </footer>
+<script>
+  // Demo notification for buttons
+  function demoNotify(event) {
+    event.preventDefault();
+    alert(
+  "Preview mode enabled.\n" +
+  "New website will be available in 15–20 days."
+);
+
+  }
+</script>
 
 </body>
 </html>
