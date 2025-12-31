@@ -1,153 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- BASIC -->
   <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-  <!-- Google Verification -->
+  <title>Scient E-Library | Permanently Closed</title>
+
+  <!-- GOOGLE VERIFICATION -->
   <meta name="google-site-verification" content="4lgK9QHpLUQxiEqFLJgKxzfaRZZqlApySO2SZ-Heexg" />
 
   <!-- SEO -->
-  <meta name="description" content="Learning with Varun has been rebranded and is transitioning to a new platform. A product of VarunTechServices." />
-  <meta name="keywords" content="Learning with Varun, Platform Update, VarunTechServices, Varun Goud" />
+  <meta name="description"
+        content="Scient E-Library has been permanently shut down and is no longer operational. This website is maintained only as an official closure notice." />
+  <meta name="keywords"
+        content="Scient E-Library closed, Scient E-Library shutdown, platform discontinued, Scient Institute e-library" />
   <meta name="author" content="B. Varun Goud" />
   <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://scient-e-library.vercel.app/" />
 
-  <!-- Open Graph -->
-  <meta property="og:site_name" content="Learning with Varun" />
-  <meta property="og:title" content="Learning with Varun | Platform Update" />
-  <meta property="og:description" content="This platform has changed. A new website link will be available soon." />
-  <meta property="og:image" content="https://scient-e-library.vercel.app/logo.jpg" />
-  <meta property="og:url" content="https://scient-e-library.vercel.app/" />
+  <!-- OPEN GRAPH -->
+  <meta property="og:site_name" content="Scient E-Library" />
+  <meta property="og:title" content="Scient E-Library | Permanently Closed" />
+  <meta property="og:description"
+        content="Scient E-Library has been permanently shut down and is no longer operational. This page is maintained as an official closure notice." />
   <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://scient-e-library.vercel.app/" />
+  <meta property="og:image" content="https://scient-e-library.vercel.app/logo.jpg" />
 
-  <!-- Twitter -->
+  <!-- TWITTER -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Learning with Varun | Update" />
-  <meta name="twitter:description" content="Learning with Varun is transitioning to a new platform." />
+  <meta name="twitter:title" content="Scient E-Library | Permanently Closed" />
+  <meta name="twitter:description"
+        content="Scient E-Library has been permanently shut down and is no longer operational." />
   <meta name="twitter:image" content="https://scient-e-library.vercel.app/logo.jpg" />
 
-  <!-- Structured Data (SAFE) -->
+  <!-- FAVICON -->
+  <link rel="icon" type="image/png" href="/logo.jpg" />
+
+  <!-- STRUCTURED DATA -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    "name": "Learning with Varun",
+    "name": "Scient E-Library",
     "url": "https://scient-e-library.vercel.app",
-    "publisher": {
-      "@type": "Organization",
-      "name": "VarunTechServices"
-    },
+    "description": "Scient E-Library has been permanently shut down and is no longer operational.",
     "creator": {
       "@type": "Person",
       "name": "B. Varun Goud",
       "url": "https://www.linkedin.com/in/bandi-varun-goud"
-    }
+    },
+    "isAccessibleForFree": false
   }
   </script>
 
-  <title>Learning with Varun | Platform Update</title>
-
-  <!-- FAVICON (IMPORTANT) -->
-  <link rel="icon" type="image/png" href="/logo.jpg" />
-
+  <!-- TAILWIND -->
   <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- ANIMATIONS -->
+  <style>
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .fade-up { animation: fadeInUp 0.9s ease-out forwards; }
+  </style>
 </head>
 
-<body class="bg-slate-950 text-gray-50">
+<body class="bg-slate-950 text-gray-100 min-h-screen flex flex-col">
 
-<!-- NAVBAR -->
-<nav class="bg-slate-950/80 backdrop-blur py-6 border-b border-slate-800">
-  <div class="max-w-7xl mx-auto px-4 flex items-center justify-between">
-    <h1 class="text-xl md:text-2xl font-bold tracking-wide">
-      Learning with Varun
-    </h1>
-  
+  <!-- BACKGROUND -->
+  <div class="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
+    <div class="absolute -top-32 left-1/2 h-80 w-80 -translate-x-1/2 rounded-full bg-red-500/20 blur-3xl"></div>
+    <div class="absolute bottom-0 right-0 h-72 w-72 bg-sky-500/10 blur-3xl translate-x-16 translate-y-10"></div>
   </div>
-</nav>
 
-<!-- HERO -->
-<header class="py-20 text-center">
-  <p class="uppercase tracking-widest text-xs text-sky-400">
-    A product of VarunTechServices
-  </p>
+  <!-- HEADER -->
+  <header class="py-24 text-center border-b border-slate-800">
+    <div class="max-w-3xl mx-auto px-4 fade-up">
+      <span class="inline-block mb-6 px-4 py-1.5 text-xs font-semibold tracking-wide uppercase
+                   rounded-full border border-red-400/40 text-red-300">
+        Status: Permanently Closed
+      </span>
 
-  <h2 class="mt-6 text-4xl md:text-5xl font-extrabold">
-    Platform Update
-  </h2>
+      <h1 class="text-3xl md:text-4xl font-semibold">
+        Scient <span class="text-red-400">E-Library</span>
+      </h1>
 
-  <p class="mt-6 max-w-2xl mx-auto text-slate-300">
-    This website has been rebranded and restructured.  
-    A new learning experience will be available soon.
-  </p>
-</header>
+      <p class="mt-4 text-lg md:text-xl text-red-300 font-semibold uppercase">
+        Permanently Closed
+      </p>
 
-<!-- NOTICE -->
-<section class="max-w-3xl mx-auto px-4 pb-20 text-center">
-  <div class="rounded-2xl bg-slate-900 border border-slate-700 p-8 shadow-xl">
-
-    <h3 class="text-2xl font-semibold mb-4">
-      Important Notice
-    </h3>
-
-    <p class="text-slate-300">
-      <strong>Scient E-Library</strong> has transitioned into
-      <strong>Learning with Varun</strong>, an independent educational platform
-      developed under <strong>VarunTechServices</strong>.
-    </p>
-
-    <!-- DEMO BUTTONS -->
-    <div class="mt-8 flex flex-col sm:flex-row justify-center gap-4">
-
-      <a href="#" onclick="demoNotify(event)"
-         class="px-6 py-3 rounded-lg bg-gradient-to-r from-sky-500 to-indigo-500 text-white font-medium hover:opacity-90 transition">
-        Get Updates via Email
-      </a>
-
-      <a href="#" onclick="demoNotify(event)"
-         class="px-6 py-3 rounded-lg bg-emerald-500 text-white font-medium hover:opacity-90 transition">
-        Get Updates on WhatsApp
-      </a>
-
+      <p class="mt-6 max-w-2xl mx-auto text-slate-300 leading-relaxed">
+        The Scient E-Library platform has been permanently shut down and is no longer operational.
+        All services, access, and updates have been fully discontinued.
+      </p>
     </div>
+  </header>
 
-    <p class="mt-4 text-xs text-slate-400">
-      Demo mode enabled — subscriptions will open soon.
+  <!-- MAIN -->
+  <main class="flex-1 max-w-3xl mx-auto px-4 py-20">
+    <section class="rounded-2xl bg-slate-900/70 border border-slate-700 p-8 md:p-10 fade-up">
+
+      <h2 class="text-2xl font-semibold mb-4">
+        Official Closure Notice
+      </h2>
+
+      <p class="text-slate-300 leading-relaxed">
+        This page serves as the official and final closure notice for the Scient E-Library platform.
+        The project has reached the end of its lifecycle and is no longer maintained, supported,
+        or accessible in any form.
+        <br /><br />
+        There is no successor platform, continuation, or migration plan associated with Scient E-Library.
+        This website exists solely to communicate the platform’s discontinued status.
+      </p>
+
+      <!-- USER IMPACT -->
+      <div class="mt-10 pt-6 border-t border-slate-800">
+        <h3 class="text-lg font-semibold mb-3">
+          What This Means for Previous Users
+        </h3>
+
+        <ul class="list-disc list-inside space-y-2 text-slate-300">
+          <li>All user accounts and stored data are no longer available.</li>
+          <li>Academic resources, notes, and question banks have been removed.</li>
+          <li>Login, registration, and dashboard features are permanently disabled.</li>
+          <li>No data recovery, reactivation, or support requests can be processed.</li>
+        </ul>
+      </div>
+
+      <!-- ABOUT -->
+      <div class="mt-10 pt-6 border-t border-slate-800 text-sm text-slate-300">
+        <h3 class="text-base font-semibold mb-2">
+          About Scient E-Library
+        </h3>
+        <p class="leading-relaxed">
+          Scient E-Library was a student-developed academic resources platform created to support
+          students of Scient Institute by providing organized study materials, previous examination
+          papers, and curriculum-aligned reference content during its active period.
+          <br /><br />
+          The platform has since been formally discontinued and is no longer part of any active
+          educational or technical initiative.
+        </p>
+      </div>
+
+      <!-- STATUS SUMMARY -->
+      <div class="mt-8 text-xs text-slate-500">
+        Platform status:
+        <span class="text-red-400 font-medium">Closed permanently</span> ·
+        Services:
+        <span class="text-red-400 font-medium">Unavailable</span> ·
+        Maintenance:
+        <span class="text-red-400 font-medium">Ended</span>
+      </div>
+
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-slate-800 py-10 text-center">
+    <p class="text-sm text-slate-400">
+      Scient E-Library — Permanently Discontinued
     </p>
-  </div>
-</section>
 
-<!-- FOOTER -->
-<footer class="border-t border-slate-800 py-10 text-center">
-  <p class="text-sm">
-    <strong>Learning with Varun</strong> — A product of
-    <span class="text-sky-400">VarunTechServices</span>
-  </p>
+    <p class="text-xs text-slate-500 mt-2">
+      This page is maintained for archival and informational purposes only.
+    </p>
 
-  <p class="text-xs text-slate-500 mt-2">
-    VarunTechServices is the parent engineering brand by B. Varun Goud.
-  </p>
-
-  <a href="https://www.linkedin.com/in/bandi-varun-goud"
-     target="_blank"
-     class="inline-block mt-4 text-sky-400 underline underline-offset-4">
-    LinkedIn
-  </a>
-</footer>
-
-
-<!-- DEMO ALERT -->
-<script>
-  function demoNotify(event) {
-    event.preventDefault();
-    alert(
-      "Thanks for your interest! 😊\n\n" +
-      "The new Learning with Varun website\n" +
-      "will be live in about 15–20 days."
-    );
-  }
-</script>
+    <a href="https://www.linkedin.com/in/bandi-varun-goud"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="inline-block mt-4 text-sky-400 underline underline-offset-4 hover:text-sky-300">
+      Connect on LinkedIn
+    </a>
+  </footer>
 
 </body>
 </html>
